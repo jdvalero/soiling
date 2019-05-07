@@ -1,25 +1,44 @@
 body{
-  background-color: white ;
-  font-family: arial;
-  font-size:15px ;
-  color: gray ;
+	background-color: white ;
+	font-family: arial;
+	font-size:15px ;
+	color:  #4C5159 ;
 }
+h6{
+	font-size:30px;
+  color:white;
+  text-align: center;
+}
+h3{
+  font-size:60px;
+  text-align: center;
+  color: white;
+}
+.nav
+{
+  position: fixed;
+top: 0;
+width:100%;
+background-color: white
+ }
 <--------menuu----->
+section{
+	background: linear-gradient(white, blue);
+}
 li
  {
-   display: inline;
+ 	 display: inline;
 }
 ul li {
-background:white;
 list-style: none;
-height: 44px;
+height: 30px;
 float:right;
 padding:10px 5px;
 
 }
 ul li a {
 
-width: 100px;
+width: 120px;
 height: 40px;
 line-height: 53px;
 border-bottom: 4px solid #244AB0;
@@ -28,7 +47,7 @@ color: black;
 font-size:18px;
 font-weight:lighter;
 text-align:center;
-text-decoration: ;
+text-decoration: none;
 display: block;
 -webkit-transition: .2s all linear;
 -moz-transition: .2s all linear;
@@ -76,21 +95,176 @@ border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
 }
+.sec1{
+  background-color: #244AB0;
+}
 
 .logo{
-  width: 100px;
-  height: 70px;
+	width: 80px;
+	height: 50px;
 }
+.container{
+
+	 width: 300px;
+	 height: 300px;
+
+}
+.button {
+  background-color: #244AB0;
+  color: white;
+  border:none;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+ border-radius: 12px;
+}
+.button {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color:white;
+  color: black;
+  border: 2px solid #244AB0;
+}
+.container {
+  width:1000px;
+  height:300px;
+  box-shadow: 2px 2px 5px #999;
+  }
+  h2{
+    font-family: arial;
+  font-size:30px ;
+  font color:  #C1C1C1;
+  font-weight: normal;
+
+  }
+  h1{
+
+     font-family: arial;
+  font-size:50px ;
+color: white;
+  font-weight: bold;
+
+  }
+
+
+
+
+.izquierda{
+  float: right;
+  float: top;
+  border-radius: 25px;
+}
+
+
+
+.fondo{
+width: 100%;
+height:600px;
+background-image:url(../imagenes/caterpillar.jpg); background-repeat:no-repeat;background-position: center; background-attachment: fixed;background-size: cover;
+
+
+}
+
+.button1 {
+  background-color: #244AB0;
+  color: blue;
+  border:none;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+ border-radius: 12px;
+float: center;
+}
+.button1 {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  float: center;
+}
+
+.button1:hover {
+  background-color:white;
+  color: blue;
+  border: 2px solid #244AB0;
+  float: center;
+}
+button a{
+  color:white;
+  font-weight: bold;
+}
+button:hover a{
+  color: #244AB0;
+  font-weight: bold;
+}
+
+.BLACK{
+
+     font-family: arial;
+  font-size:50px ;
+color: black;
+  font-weight: bold;
+text-align: center;
+}
+.textoslargos{
+
+  font-size:25px;
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+.textos{
+
+  font-size:25px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+.textos1{
+
+  font-size:20px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+color: white;
+font-family: arial;
+float: center;
+}
+.footer, .push {
+height: 4em;
+float: center;
+}
+.blue{
+  background: linear-gradient(#244AB0,#244AB0);
+}
+.pool{
+  background-color: #244AB0;
+  color: white;
+  width: 298px;
+  height:10px;
+}
+
 .slidershow{
   width: 1350px;
   height: 500px;
   overflow: hidden;
 }
 .middle{
-  position: absolute;
-  top: 55%;
+  position:  relative ;
+  text-align: center;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-0%);
 }
 .navigation{
   position: absolute;
@@ -140,12 +314,7 @@ input[name="r"]{
 #r3:checked ~ .s1{
   margin-left: -40%;
 }
-#r4:checked ~ .s1{
-  margin-left: -60%;
-}
-#r5:checked ~ .s1{
-  margin-left: -80%;
-}
+
 
 .texto{
    font-size: 70px;
