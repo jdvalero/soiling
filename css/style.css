@@ -28,7 +28,7 @@ color: black;
 font-size:18px;
 font-weight:lighter;
 text-align:center;
-text-decoration: none;
+text-decoration: ;
 display: block;
 -webkit-transition: .2s all linear;
 -moz-transition: .2s all linear;
@@ -145,4 +145,24 @@ input[name="r"]{
 }
 #r5:checked ~ .s1{
   margin-left: -80%;
+}
+
+.texto{
+   font-size: 70px;
+   width: 700px;
+   height: 10px;
+   position: fixed;
+   top: 94px;
+   color: #fff;
+   text-align: left;
+}
+
+.texto1{
+   font-size: 70px;
+   width: 700px;
+   height: 10px;
+   position: fixed;
+   top: 94px;
+   color: #244AB0;
+   text-align: left;
 }
