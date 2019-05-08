@@ -17,18 +17,23 @@ h3{
   text-align: left;
   color: white;
   width: 35%
-  
+
 }
 #menu ul li {
+  position:fixed; top:0;
     font-family: arial;
     background-color:;
+
 }
+
 
 #menu ul {
     list-style:none;
     margin:0%;
     padding:0%;
 }
+.fixed{position:fixed; top:0}
+
 
 ul li a {
 
@@ -50,68 +55,66 @@ transition: .2s all linear;
 }
 li:nth-child(1) a {
 border-color: #244AB0;
-margin: 0 10px 0 10px;
+margin: 0 1px 0 1px;
 
 }
 li:nth-child(2) a {
 border-color: #244AB0;
-margin: 0 10px 0 10px;
+margin: 0 1px 0 1px;
 }
 li:nth-child(3) a {
 border-color: #244AB0;
-margin: 0 10px 0 10px;
+margin: 0 1px 0 1px;
 }
 li:nth-child(4) a {
 border-color: #244AB0;
-margin: 0 10px 0 10px;
+margin: 0 1px 0 1px;
 }
 
 li:nth-child(5) a {
 border-color: #244AB0;
-margin: 0 10px 0 10px;
+margin: 0 1px 0 1px;
 }
 li:nth-child(2) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
 
-top: 1%;
-padding: 1%;
+
 }
 li:nth-child(3) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
-top: 1%;
-padding: 1%;
+
 }
 li:nth-child(4) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
-top: 1%;
-padding: 1%;
+
 }
 li:nth-child(5) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
-top: 1%;
-padding: 1%;
+
 }
 li:nth-child(6) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
-top: 1%;
-padding: 1%;
+
 }
+
+
 .nav
 {
   position: fixed;
 top: 0;
 width:100%;
-background-color: white
+background-color: white;
+
  }
 
  li{
@@ -139,7 +142,7 @@ background-color: white
 
 #menu ul ul li {
     float:none;
-    width:150px
+    width:122px
 }
 
 #menu ul ul a {
@@ -149,6 +152,9 @@ background-color: white
 
 #menu ul li:hover > ul {
     display:block;
+    border-radius: 10%;
+    background-color:#fff ;
+
 }
 
 .sec1{
@@ -206,7 +212,18 @@ color: white;
 
   }
 
+.derecha{
+  float:left;
+}
 
+.con{
+   width: 1100px;
+   height: 450px;
+float: center
+ box-shadow: 2px 2px 5px #999;
+background-color: white  ; margin: 4px 4px 4px 4px ;  border-radius:15px; border-color: #1022FF; box-shadow: 2px 2px 5px #999;
+;
+}
 
 
 .izquierda{
