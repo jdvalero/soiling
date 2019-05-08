@@ -1,3 +1,4 @@
+
 body{
 	background-color: white ;
 	font-family: arial;
@@ -5,8 +6,22 @@ body{
 	color:  #4C5159 ;
 }
 h6{
-	font-size:14px;
+	font-size:30px;
+  color:white;
+  text-align: center;
 }
+h3{
+  font-size:60px;
+  text-align: center;
+  color: white;
+}
+.nav
+{
+  position: fixed;
+top: 0;
+width:100%;
+background-color: white
+ }
 <--------menuu----->
 section{
 	background: linear-gradient(white, blue);
@@ -16,9 +31,8 @@ li
  	 display: inline;
 }
 ul li {
-background:white;
 list-style: none;
-height: 44px;
+height: 30px;
 float:right;
 padding:10px 5px;
 
@@ -51,23 +65,23 @@ border-color: #244AB0;
 li:nth-child(8) a {
 border-color: #244AB0;
 }
-li:nth-child(4) a {
+li:nth-child(3) a {
 border-color: #244AB0;
 }
-li:nth-child(5) a {
+li:nth-child(2) a {
 border-color: #244AB0;
 }
-li:nth-child(7) a:hover {
+li:nth-child(1) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
 }
-li:nth-child(6) a:hover {
+li:nth-child(2) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
 }
-li:nth-child(8) a:hover {
+li:nth-child(3) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
@@ -87,17 +101,17 @@ color: white ;
 }
 
 .logo{
-	width: 100px;
-	height: 70px;
+	width: 80px;
+	height: 50px;
 }
 .container{
-	 
+
 	 width: 300px;
 	 height: 300px;
 
 }
 .button {
-  background-color: #244AB0; 
+  background-color: #244AB0;
   color: white;
   border:none;
   padding: 10px 24px;
@@ -107,7 +121,7 @@ color: white ;
  border-radius: 12px;
 }
 .button {
-  -webkit-transition-duration: 0.4s; 
+  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
 
@@ -118,34 +132,133 @@ color: white ;
 }
 .container {
   width:1000px;
-  height:100px;
-  text-align: left;
-  }
-  h5{
-    font-family: verdana;
-  font-size:13px ;
-  font color:  #C1C1C1;
-  font-weight: normal;
-
+  height:300px;
+  box-shadow: 2px 2px 5px #999;
   }
   h2{
-
-     font-family: verdana;
-  font-size:45px ;
+    font-family: arial;
+  font-size:30px ;
   font color:  #C1C1C1;
   font-weight: normal;
+
+  }
+  h1{
+
+     font-family: arial;
+  font-size:50px ;
+color: white;
+  font-weight: bold;
+
   }
 
- 
 
 
 
+.izquierda{
+  float: right;
+  float: top;
+  border-radius: 25px;
+}
 
 
 
+.fondo{
+width: 100%;
+height:600px;
+background-image:url(../imagenes/caterpillar.jpg); background-repeat:no-repeat;background-position: center; background-attachment: fixed;background-size: cover;
 
 
- 
+}
+
+.button1 {
+  background-color: #244AB0;
+  color: blue;
+  border:none;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+ border-radius: 12px;
+float: center;
+}
+.button1 {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  float: center;
+}
+
+.button1:hover {
+  background-color:white;
+  color: blue;
+  border: 2px solid #244AB0;
+  float: center;
+}
+button a{
+  color:white;
+  font-weight: bold;
+}
+button:hover a{
+  color: #244AB0;
+  font-weight: bold;
+}
+
+.BLACK{
+
+     font-family: arial;
+  font-size:50px ;
+color: black;
+  font-weight: bold;
+text-align: center;
+}
+.textoslargos{
+
+  font-size:25px;
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+.textos{
+
+  font-size:25px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+.textos1{
+
+  font-size:20px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+color: white;
+font-family: arial;
+float: center;
+}
+.footer, .push {
+height: 4em;
+float: center;
+}
+.blue{
+  background: linear-gradient(#244AB0,#244AB0);
+}
+.pool{
+  background-color: #244AB0;
+  color: white;
+  width: 298px;
+  height:10px;
+}
+
+.fondo{
+width: 100%;
+height:600px;
+background-image:url(../imagenes/inicio.jpg); background-repeat:no-repeat;background-position: center; background-attachment: fixed;background-size: cover;
 
 
-
+}
