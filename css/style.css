@@ -1,41 +1,35 @@
+
 body{
-	background-color: white ;
-	font-family: arial;
-	font-size:15px ;
-	color:  #4C5159 ;
+    background-color: white ;
+    font-family: arial;
+    font-size:15px ;
+    color:  #4C5159 ;
 }
 h6{
-	font-size:30px;
+    font-size:30px;
   color:white;
   text-align: center;
+  width: 50px;
+  height: 10px;
 }
 h3{
   font-size:60px;
-  text-align: center;
+  text-align: left;
   color: white;
+  width: 35%
+  
 }
-.nav
-{
-  position: fixed;
-top: 0;
-width:100%;
-background-color: white
- }
-<--------menuu----->
-section{
-	background: linear-gradient(white, blue);
+#menu ul li {
+    font-family: arial;
+    background-color:;
 }
-li
- {
- 	 display: inline;
-}
-ul li {
-list-style: none;
-height: 30px;
-float:right;
-padding:10px 5px;
 
+#menu ul {
+    list-style:none;
+    margin:0%;
+    padding:0%;
 }
+
 ul li a {
 
 width: 120px;
@@ -44,7 +38,7 @@ line-height: 53px;
 border-bottom: 4px solid #244AB0;
 padding:0px;
 color: black;
-font-size:18px;
+font-size:12px;
 font-weight:lighter;
 text-align:center;
 text-decoration: none;
@@ -54,59 +48,121 @@ display: block;
 -o-transition: .2s all linear;
 transition: .2s all linear;
 }
-li:nth-child(7) a {
+li:nth-child(1) a {
 border-color: #244AB0;
+margin: 0 10px 0 10px;
 
 }
-li:nth-child(6) a {
+li:nth-child(2) a {
 border-color: #244AB0;
+margin: 0 10px 0 10px;
 }
-li:nth-child(8) a {
+li:nth-child(3) a {
 border-color: #244AB0;
+margin: 0 10px 0 10px;
 }
 li:nth-child(4) a {
 border-color: #244AB0;
+margin: 0 10px 0 10px;
 }
+
 li:nth-child(5) a {
 border-color: #244AB0;
+margin: 0 10px 0 10px;
 }
-li:nth-child(7) a:hover {
+li:nth-child(2) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
+
+top: 1%;
+padding: 1%;
 }
-li:nth-child(6) a:hover {
+li:nth-child(3) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
-}
-li:nth-child(8) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
+top: 1%;
+padding: 1%;
 }
 li:nth-child(4) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
+top: 1%;
+padding: 1%;
 }
 li:nth-child(5) a:hover {
 border-bottom: 35px solid #244AB0;
 height: 9px;
 color: white ;
+top: 1%;
+padding: 1%;
 }
+li:nth-child(6) a:hover {
+border-bottom: 35px solid #244AB0;
+height: 9px;
+color: white ;
+top: 1%;
+padding: 1%;
+}
+.nav
+{
+  position: fixed;
+top: 0;
+width:100%;
+background-color: white
+ }
+
+ li{
+    list-style:none
+ }
+
+#menu ul li {
+    position:relative;
+    float:right;
+    margin:0;
+    padding:0%;
+}
+
+#menu ul li:hover {
+    background:;
+}
+
+#menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    padding:0;
+}
+
+#menu ul ul li {
+    float:none;
+    width:150px
+}
+
+#menu ul ul a {
+    line-height:500%;
+    padding:-20px -10px;
+}
+
+#menu ul li:hover > ul {
+    display:block;
+}
+
 .sec1{
   background-color: #244AB0;
 }
 
 .logo{
-	width: 80px;
-	height: 50px;
+    width: 80px;
+    height: 50px;
 }
 .container{
 
-	 width: 300px;
-	 height: 300px;
+     width: 300px;
+     height: 300px;
 
 }
 .button {
@@ -251,69 +307,10 @@ float: center;
   background-color: #244AB0;
   color: white;
   width: 298px;
-  height:10px;
+  height:20px;
 }
 
-.slidershow{
-  width: 1350px;
-  height: 500px;
-  overflow: hidden;
-}
-.middle{
-  position:  relative ;
-  text-align: center;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%,-0%);
-}
-.navigation{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-.bar{
-  width: 50px;
-  height: 10px;
-  border: 2px solid #fff;
-  margin: 6px;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.bar:hover{
-  background: #fff;
-}
 
-input[name="r"]{
-    position: absolute;
-    visibility: hidden;
-}
-
-.slides{
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
-
-.slide{
-  width: 20%;
-  transition: 0.6s;
-}
-.slide img{
-  width: 100%;
-  height: 100%;
-}
-
-#r1:checked ~ .s1{
-  margin-left: 0;
-}
-#r2:checked ~ .s1{
-  margin-left: -20%;
-}
-#r3:checked ~ .s1{
-  margin-left: -40%;
-}
 
 
 .texto{
