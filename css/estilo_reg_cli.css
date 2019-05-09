@@ -184,6 +184,28 @@ table{
   float:center;
   width: 300px;
 }
+.textoslargos{
+
+  font-size:25px;
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+.textos{
+
+  font-size:25px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+.textos1{
+
+  font-size:20px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+
 .wrapper {
 min-height: 100%;
 height: auto !important;
@@ -204,5 +226,28 @@ float: center;
   background-color: #244AB0;
   color: white;
   width: 298px;
-  height:10px;
+  height:20px;
+}
+
+
+
+
+.texto{
+   font-size: 70px;
+   width: 700px;
+   height: 10px;
+   position: fixed;
+   top: 94px;
+   color: #fff;
+   text-align: left;
+}
+
+.texto1{
+   font-size: 70px;
+   width: 700px;
+   height: 10px;
+   position: fixed;
+   top: 94px;
+   color: #244AB0;
+   text-align: left;
 }
