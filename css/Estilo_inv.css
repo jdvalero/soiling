@@ -161,8 +161,13 @@ background-color: white;
 	  background-color: white;
 
 }
+
+.derecha{
+  float:left;
+  border-radius: 25px;
+}
 .button {
-  background-color: #244AB0; 
+  background-color: #244AB0;
   color: white;
   border:none;
   padding: 4px 10px;
@@ -208,7 +213,7 @@ background-color: white  ; margin: 4px 4px 4px 4px ;  border-radius:15px; border
   height: 80px;
 }
 section{
-	background: linear-gradient(white, white ); 
+	background: linear-gradient(white, white );
 }
 * {
 margin: 0;
@@ -230,7 +235,7 @@ height: 4em;
 float: center;
 }
 .blue{
-	background: linear-gradient(#244AB0,#244AB0); 
+	background: linear-gradient(#244AB0,#244AB0);
 }
 .pool{
 	background-color: #244AB0;
@@ -238,4 +243,3 @@ float: center;
 	width: 298px;
 	height:20px;
 }
-
