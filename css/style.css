@@ -1,4 +1,4 @@
-
+*{margin: 0; padding: 0;}
 body{
     background-color: white ;
     font-family: arial;
@@ -16,145 +16,119 @@ h3{
   font-size:60px;
   text-align: left;
   color: white;
-  width: 35%
-
-}
-#menu ul li {
-  position:fixed; top:0;
-    font-family: arial;
-    background-color:;
+  width: 35%;
+  padding: 7% 5%;
 
 }
 
 
-#menu ul {
-    list-style:none;
-    margin:0%;
-    padding:0%;
-}
-.fixed{position:fixed; top:0}
 
 
-ul li a {
-
-width: 120px;
-height: 40px;
-line-height: 53px;
-border-bottom: 4px solid #244AB0;
-padding:0px;
-color: black;
-font-size:12px;
-font-weight:lighter;
-text-align:center;
-text-decoration: none;
-display: block;
--webkit-transition: .2s all linear;
--moz-transition: .2s all linear;
--o-transition: .2s all linear;
-transition: .2s all linear;
-}
-li:nth-child(1) a {
-border-color: #244AB0;
-margin: 0 1px 0 1px;
-
-}
-li:nth-child(2) a {
-border-color: #244AB0;
-margin: 0 1px 0 1px;
-}
-li:nth-child(3) a {
-border-color: #244AB0;
-margin: 0 1px 0 1px;
-}
-li:nth-child(4) a {
-border-color: #244AB0;
-margin: 0 1px 0 1px;
+header {
+	width:100%;
+	background:#fff;
+	margin-bottom:20px;
+	position: fixed;
 }
 
-li:nth-child(5) a {
-border-color: #244AB0;
-margin: 0 1px 0 1px;
+.wrapper1 {
+	width:90%;
+	max-width:1000px;
+	margin:auto;
+	overflow:hidden;
 }
-li:nth-child(2) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
+
+header .logo1 {
+	color:black;
+	font-size:50px;
+	line-height:100px;
+	float:left;
+}
+
+header nav {
+	float:right;
+	line-height:100px;
 
 
 }
-li:nth-child(3) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
 
+header nav a {
+	display:inline-block;
+	color:#000;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:15px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
 }
-li:nth-child(4) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
 
-}
-li:nth-child(5) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
 
-}
-li:nth-child(6) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
+
+header nav a:hover {
+	background:#244AB0;
+	border-radius:50px;
+	color:#fff;
+
+
 
 }
 
 
-.nav
-{
-  position: fixed;
-top: 0;
-width:100%;
-background-color: white;
 
- }
 
- li{
-    list-style:none
- }
 
-#menu ul li {
-    position:relative;
-    float:right;
-    margin:0;
-    padding:0%;
+.nav{
+	width: 666px;
+	margin: 0px;
+
 }
 
-#menu ul li:hover {
-    background:;
+.nav ul{
+	list-style: none;
+
 }
 
-#menu ul ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    padding:0;
+
+.menu > li{
+
+	display: inline-block;
+
+}
+li{
+  list-style: none;
 }
 
-#menu ul ul li {
-    float:none;
-    width:122px
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
 }
 
-#menu ul ul a {
-    line-height:500%;
-    padding:-20px -10px;
+.submenu{
+	position: absolute;
+	background:#333333;
+	width: 11%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+	border-radius: 25px;
 }
 
-#menu ul li:hover > ul {
-    display:block;
-    border-radius: 10%;
-    background-color:#fff ;
+.submenu li a{
+	display: block;
+	font-size: 12px;
+	width: 80%;
+	padding: 15px;
+	color:#fff;
+	text-decoration: none;
+}
 
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
 }
 
 .sec1{
@@ -162,13 +136,14 @@ background-color: white;
 }
 
 .logo{
-    width: 80px;
-    height: 50px;
+	width: 80px;
+	height: 50px;
+
 }
 .container{
 
-     width: 300px;
-     height: 300px;
+	 width: 300px;
+	 height: 300px;
 
 }
 .button {
@@ -192,8 +167,8 @@ background-color: white;
   border: 2px solid #244AB0;
 }
 .container {
-  width:1000px;
-  height:300px;
+  width:1200px;
+  height:500px;
   box-shadow: 2px 2px 5px #999;
   }
   h2{
@@ -212,18 +187,7 @@ color: white;
 
   }
 
-.derecha{
-  float:left;
-}
 
-.con{
-   width: 1100px;
-   height: 450px;
-float: center
- box-shadow: 2px 2px 5px #999;
-background-color: white  ; margin: 4px 4px 4px 4px ;  border-radius:15px; border-color: #1022FF; box-shadow: 2px 2px 5px #999;
-;
-}
 
 
 .izquierda{
@@ -248,15 +212,18 @@ background-image:url(../imagenes/caterpillar.jpg); background-repeat:no-repeat;b
   border:none;
   padding: 10px 24px;
   text-align: center;
-  display: inline-block;
+
   font-size: 16px;
  border-radius: 12px;
 float: center;
+
+
 }
 .button1 {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   float: center;
+
 }
 
 .button1:hover {
@@ -264,6 +231,7 @@ float: center;
   color: blue;
   border: 2px solid #244AB0;
   float: center;
+
 }
 button a{
   color:white;
@@ -327,25 +295,194 @@ float: center;
   height:20px;
 }
 
+.fondo{
+width: 100%;
+height:600px;
+background-image:url(../imagenes/caterpillar.jpg); background-repeat:no-repeat;background-position: center; background-attachment: fixed;background-size: cover;
 
 
-
-.texto{
-   font-size: 70px;
-   width: 700px;
-   height: 10px;
-   position: fixed;
-   top: 94px;
-   color: #fff;
-   text-align: left;
 }
 
-.texto1{
-   font-size: 70px;
-   width: 700px;
-   height: 10px;
-   position: fixed;
-   top: 94px;
-   color: #244AB0;
-   text-align: left;
+
+
+
+
+
+
+.imagen{
+background-size: 135%;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  background-image: url(../imagenes/one.jpg);
+
+}
+
+.info{
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(31,31,31,0.9);
+  -webkit-transition:opacity:0.8s;
+
+  opacity: 0;
+
+}
+.imagen:hover .info{
+  opacity: 1;
+}
+.headline{
+  color: white;
+  position: absolute;
+  margin-top:20px;
+  -webkit-transition:margin 0.2s;
+  margin-left: -10px;
+  font-size:21px;
+
+
+}
+.imagen:hover .headline{
+  margin-left: 10px;
+
+}
+.info2{
+  color: white;
+  margin: auto;
+  width: 250px;
+  text-align: center;
+  -webkit-transition:margin 0.3s;
+  margin-top: 160px;
+
+
+}
+.imagen:hover .info2{
+  margin-top: 70px
+}
+
+
+
+
+.imagen2{
+background-size: 135%;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  background-image: url(../imagenes/two.jpg);
+
+}
+
+.info{
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(31,31,31,0.9);
+  -webkit-transition:opacity:0.8s;
+
+  opacity: 0;
+
+}
+.imagen2:hover .info{
+  opacity: 1;
+}
+.headline{
+  color: white;
+  position: absolute;
+  margin-top:20px;
+  -webkit-transition:margin 0.2s;
+  margin-left: -10px;
+  font-size:21px;
+
+
+}
+.imagen2:hover .headline{
+  margin-left: 10px;
+
+}
+.info2{
+  color: white;
+  margin: auto;
+  width: 250px;
+  text-align: center;
+  -webkit-transition:margin 0.3s;
+  margin-top: 160px;
+
+
+}
+.imagen2:hover .info2{
+  margin-top: 70px
+}
+
+
+
+
+
+.imagen3{
+background-size: 135%;
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  background-image: url(../imagenes/three.jpg);
+
+}
+
+.info{
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(31,31,31,0.9);
+  -webkit-transition:opacity:0.8s;
+
+  opacity: 0;
+
+}
+.imagen3:hover .info{
+  opacity: 1;
+}
+.headline{
+  color: white;
+  position: absolute;
+  margin-top:20px;
+  -webkit-transition:margin 0.2s;
+  margin-left: -10px;
+  font-size:21px;
+
+
+}
+.imagen3:hover .headline{
+  margin-left: 10px;
+
+}
+.info2{
+  color: white;
+  margin: auto;
+  width: 250px;
+  text-align: center;
+  -webkit-transition:margin 0.3s;
+  margin-top: 160px;
+
+
+}
+.imagen3:hover .info2{
+  margin-top: 70px
+}
+
+.circle{
+  color:white;
+  background-color: #244AB0;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+}
+
+.saltos{
+  width: 1000px;
+}
+
+
+#link{
+  color: black;
+  text-decoration: none;
 }
