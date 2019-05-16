@@ -11,76 +11,111 @@ h6{
 section{
 	background: linear-gradient(white, blue);
 }
-li
- {
- 	 display: inline;
+header {
+	width:100%;
+	background:#fff;
+	margin-bottom:20px;
+	position: fixed;
 }
-ul li {
-background:white;
-list-style: none;
-height: 44px;
-float:right;
-padding:10px 5px;
+
+.wrapper1 {
+	width:90%;
+	max-width:1000px;
+	margin:auto;
+	overflow:hidden;
+}
+
+header .logo1 {
+	color:black;
+	font-size:50px;
+	line-height:100px;
+	float:left;
+}
+
+header nav {
+	float:right;
+	line-height:100px;
+
 
 }
-ul li a {
 
-width: 120px;
-height: 40px;
-line-height: 53px;
-border-bottom: 4px solid #244AB0;
-padding:0px;
-color: black;
-font-size:18px;
-font-weight:lighter;
-text-align:center;
-text-decoration: none;
-display: block;
--webkit-transition: .2s all linear;
--moz-transition: .2s all linear;
--o-transition: .2s all linear;
-transition: .2s all linear;
+header nav a {
+	display:inline-block;
+	color:#000;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:15px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
 }
-li:nth-child(7) a {
-border-color: #244AB0;
+
+
+
+header nav a:hover {
+	background:#244AB0;
+	border-radius:50px;
+	color:#fff;
+
+
 
 }
-li:nth-child(6) a {
-border-color: #244AB0;
+
+
+
+
+
+.nav{
+	width: 444px;
+	margin: 0px;
+
 }
-li:nth-child(8) a {
-border-color: #244AB0;
+
+.nav ul{
+	list-style: none;
+
 }
-li:nth-child(4) a {
-border-color: #244AB0;
+
+
+.menu > li{
+
+	display: inline-block;
+
 }
-li:nth-child(5) a {
-border-color: #244AB0;
+li{
+  list-style: none;
 }
-li:nth-child(7) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
 }
-li:nth-child(6) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
+
+.submenu{
+	position: absolute;
+	background:#333333;
+	width: 11%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+	border-radius: 25px;
 }
-li:nth-child(8) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
+
+.submenu li a{
+	display: block;
+	font-size: 12px;
+	width: 80%;
+	padding: 15px;
+	color:#fff;
+	text-decoration: none;
 }
-li:nth-child(4) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
-}
-li:nth-child(5) a:hover {
-border-bottom: 35px solid #244AB0;
-height: 9px;
-color: white ;
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
 }
 
 .logo{
