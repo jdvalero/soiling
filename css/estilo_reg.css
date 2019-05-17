@@ -1,0 +1,198 @@
+body{
+	background-color: white ;
+	font-family: arial;
+	font-size:15px ;
+	color: gray ;
+}
+h6{
+	font-size:14px;
+}
+<--------menuu----->
+section{
+	background: linear-gradient(white, blue);
+}
+header {
+	width:100%;
+	background:#fff;
+	margin-bottom:20px;
+	position: fixed;
+}
+
+.wrapper1 {
+	width:90%;
+	max-width:1000px;
+	margin:auto;
+	overflow:hidden;
+}
+
+header .logo1 {
+	color:black;
+	font-size:50px;
+	line-height:100px;
+	float:left;
+}
+
+header nav {
+	float:right;
+	line-height:100px;
+
+
+}
+
+header nav a {
+	display:inline-block;
+	color:#000;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:15px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+
+
+header nav a:hover {
+	background:#244AB0;
+	border-radius:50px;
+	color:#fff;
+
+
+
+}
+
+
+
+
+
+.nav{
+	width: 444px;
+	margin: 0px;
+
+}
+
+.nav ul{
+	list-style: none;
+
+}
+
+
+.menu > li{
+
+	display: inline-block;
+
+}
+li{
+  list-style: none;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
+}
+
+.submenu{
+	position: absolute;
+	background:#333333;
+	width: 11%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0s;
+	border-radius: 25px;
+}
+
+.submenu li a{
+	display: block;
+	font-size: 12px;
+	width: 80%;
+	padding: 15px;
+	color:#fff;
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+.logo{
+	width: 100px;
+	height: 70px;
+}
+.container{
+	 box-shadow: 2px 2px 5px #999;
+	 width: 450px;
+	 height: 600px;
+
+}
+.button {
+  background-color: #244AB0;
+  color: white;
+  border:none;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+ border-radius: 12px;
+}
+.button {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color:white;
+  color: black;
+  border: 2px solid #244AB0;
+}
+table{
+  float:center;
+  width: 300px;
+}
+
+.textoslargos{
+
+  font-size:25px;
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+.textos{
+
+  font-size:25px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+.textos1{
+
+  font-size:20px;
+  text-align: left;
+  color: black;
+  font-weight: normal;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+color: white;
+font-family: arial;
+float: center;
+}
+.footer, .push {
+height: 4em;
+float: center;
+}
+.blue{
+  background: linear-gradient(#244AB0,#244AB0);
+}
+.pool{
+  background-color: #244AB0;
+  color: white;
+  width: 298px;
+  height:20px;
+}

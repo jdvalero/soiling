@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registro productos</title>
+		<link rel="stylesheet" type="text/css" href="css/Estilo_inv.css">
+	</head>
+	<body>
+
+		<header >
+		<div class="wrapper1">
+			<div class="logo1">
+				Soiling
+			</div>
+			<nav class="nav">
+			<ul class="menu">
+
+
+<li> <a href="index2.html">Inicio</a> </li>
+			  <li><a href="#">Registros</a>
+				<ul class="submenu">
+
+				  <li><a href="Reg_Clientes.html">Registrar cliente</a></li>
+				  <li><a href="Reg_proveedores.html">Registrar proveedor</a></li>
+				  <li><a href="Reg_productos.html">Registrar producto</a></li>
+					<li><a href="Reg_obras.html">Registro de obras</a></li>
+					<li><a href="pedido.html">Pedido</a></li>
+				</ul>
+				</li>
+				 <li><a href="#">Consultas</a>
+			  	<ul class="submenu">
+			      <li><a href="Usuarios.html">Consulta de ususario</a></li>
+			      <li><a href="Proveedores.html">Consulta proveedor</a></li>
+			    </ul>
+			  </li>
+			  <li><a href="#">Gestiones</a>
+				<ul class="submenu">
+			  		<li><a href="inventario.html">Gestion de inventario</a></li>
+						<li><a href="Con_Pedidos.html">Control pedidos</a></li>
+			  		<li><a href="gestion-obras.html">Gestiones de obras</a></li>
+
+				</ul>
+			 </li>
+			 <li><a href="Factura.html">Factura</a></li>
+			 <li><a href="index.html">Cerrar sesion</a></li>
+
+			</ul>
+
+		</nav>
+		</div>
+	</header>
+
+		<br><br><br>
+<center>
+    <br>
+    <br>
+    <br>
+		<br><br>
+<h1>Registro de productos</h1>
+
+<br>
+<br>
+  <div class="con">
+    <br>
+    <br>
+<form action="Registro_Procuto" method="post">
+
+  <table align="center" class="table">
+   <td>
+    Nombre:
+    <br> <input type="text" name="nombre" placeholder="Su nombre de usuario"
+         required pattern="[A-Za-z0-9]{5,40}"
+         title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 40">
+   </td>
+
+   <td>
+    Codigo:
+    <br><input type="text" name="Nombre" size="41"  required="">
+   </td>
+   <tr></tr>
+
+   <td>
+    Valor:
+    <br><input type="text" name="valor" size="40"required="">
+   </td>
+
+
+   <td>
+   Categoria:
+   <br>
+   <select required="">
+  <option value="volvo">Material</option>
+  <option value="saab">Vehiculo</option>
+  <option value="mercedes">Respuesto</option>
+  <option value="audi">Articulo</option>
+   </select>
+   </td>
+    <tr></tr>
+      <td>
+     Cantidad:
+     <br>
+     <input name="uploadedfile" type="text" size="40" required="" />
+   </td>
+
+
+   <td>
+     Proveedor:
+     <br>
+     <input name="uploadedfile" type="text" size="40" required pattern="[A-Za-z0-9]{5,40}"/>
+   </td>
+   <tr></tr>
+    <td>
+     Fecha:
+     <br>
+     <input name="uploadedfile" type="date" size="40" />
+   </td>
+  </table>
+  Comentario:
+  <br>
+  <textarea cols="100" rows="10" required pattern="[A-Za-z0-9]{5,40}">
+
+  </textarea>
+  <br>
+    <br>
+  <button class="button" type="submit">
+    Enviar
+  </button>
+   <button class="button">
+   Cancelar
+  </button>
+  </div>
+	<br><br><br>
+	<section class="blue">
+
+	  <div class="wrapper">
+	            <table >
+	   <br>
+	                <br>
+	              <td colspan="2">
+
+	                <img src="imagenes/Logo_SOILING_Light.png">
+	              </td>
+
+	           <td>
+	             <ul class="pool">
+	               <li class="pool">Social Media</li>
+	               <li class="pool">facebook</li>
+	                    <li class="pool">Twiter</li>
+	                         <li class="pool">Instagram</li>
+	                            <li class="pool">Youtube</li>
+	             </ul>
+	           </td>
+	             <td>
+	             <ul class="pool">
+	               <li class="pool">Ubicacion</li>
+	               <li class="pool">Dirección e informaciónn de contacto.
+
+	</li>
+	                    <li class="pool">Dirección: Carrera 2B No. 69A – 35
+
+	</li>
+	                         <li class="pool">Correo: soilingsas@gmail.com
+
+	</li>
+	                            <li class="pool">Teléfono: (+57) 1 249 7675
+
+	</li>
+	             </ul>
+	           </td>
+	             <td>
+	             <ul class="pool">
+	               <li class="pool">Design:Tecdeluxe</li>
+	               <li class="pool">facebook</li>
+	                    <li class="pool">Twiter</li>
+	                         <li class="pool">Instagram</li>
+	                            <li class="pool">Youtube</li>
+	             </ul>
+	           </td>
+	            </table>
+							<br><br>
+	       <div class="footer">
+	            <p>Copyright (c) 2019</p>
+	       </div>
+	       </section>
+</center>
+
+</section>
+<br><br>
+<br>
+<br></form>
+
+
+	</body>
+</html>
