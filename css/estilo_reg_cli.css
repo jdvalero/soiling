@@ -101,7 +101,11 @@ li{
 	width: 11%;
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 0.0s;
+
+	transition: opacity 0s;
+
+	transition: opacity 0s;
+
 	border-radius: 25px;
 }
 
@@ -127,7 +131,7 @@ li{
 .container{
 	 box-shadow: 2px 2px 5px #999;
 	 width: 450px;
-	 height: 500px;
+	 height: 550px;
 
 }
 .button {
@@ -164,4 +168,7 @@ li{
   color: white;
   width: 298px;
   height:20px;
+}
+img{
+	float: left;
 }
