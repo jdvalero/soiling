@@ -14,11 +14,13 @@ section{
 }
 
 .atras{
-	position: absolute;
-	padding: 170px 150px;
-	text-align: right;
+	margin: 1% 10%;
+	position: fixed;
+	padding: 1px 1px;
+	top: 30%;
 
 }
+
 
 header {
 	width:100%;
