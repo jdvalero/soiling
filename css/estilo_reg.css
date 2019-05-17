@@ -100,7 +100,11 @@ li{
 	width: 11%;
 	visibility: hidden;
 	opacity: 0;
+<<<<<<< HEAD
 	transition: opacity 0s;
+=======
+	transition: opacity 1.5s;
+>>>>>>> soilingr/master
 	border-radius: 25px;
 }
 
