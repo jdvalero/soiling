@@ -21,7 +21,15 @@ h3{
 
 }
 
+.casa{
+  width: 30px;
+  height: 30px;
+  
+  padding: 0px 550px;
+  top: 65px;
 
+
+}
 
 
 header {
@@ -32,7 +40,7 @@ header {
 }
 
 .wrapper1 {
-	width:90%;
+	width:125%;
 	max-width:1000px;
 	margin:auto;
 	overflow:hidden;
@@ -56,7 +64,7 @@ header nav a {
 	display:inline-block;
 	color:#000;
 	text-decoration:none;
-	padding:10px 20px;
+	padding:10px 5px;
 	line-height:normal;
 	font-size:15px;
 	font-weight:bold;
@@ -81,7 +89,7 @@ header nav a:hover {
 
 
 .nav{
-	width: 666px;
+
 	margin: 0px;
 
 }
@@ -113,7 +121,7 @@ li{
 	width: 11%;
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 1.5s;
+	transition: opacity 0.0s;
 	border-radius: 25px;
 }
 
@@ -130,6 +138,8 @@ li{
 	visibility: visible;
 	opacity: 1;
 }
+
+
 
 .sec1{
   background-color: #244AB0;
