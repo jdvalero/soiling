@@ -30,6 +30,7 @@
 			  	<ul class="submenu">
 			      <li><a href="Usuarios.html">Consulta de ususario</a></li>
 			      <li><a href="Proveedores.html">Consulta proveedor</a></li>
+						<li><a href="con_Almacen.html">Consulta almacen</a></li>
 			    </ul>
 			  </li>
 			  <li><a href="#">Gestiones</a>
@@ -62,49 +63,49 @@ Registro proveedores
 
 <form action="Registro" method="post">
 <label>
-Nombre de Empresa:
-<input type="text" name="Nombre" required pattern="[A-Za-z0-9]{5-40}" title="Porfavor Ingresar Menos de 40 caracteres">
+<p>Nombre de la empresa  <input type="text"  maxlength="15" name="Nombre" | pattern="[A-Z a-z]{6,15}" title="solo se aceptan letras y minimo 6 y maximo 15 letras" required>
 </label>
 <br>
 <br>
 <label>
 Nit empresa:
-<input type="text" name="Nombre" required pattern="[A-Za-z0-9]{5-40}" title="Porfavor Ingresar Menos de 40 caracteres">
+<input type="text" name="Nombre" maxlength="10" pattern="[0-9]{5,10}" title="ingrese  solo numeros minimo 5 maximo 10 caracteres" required>
 </label>
 <br>
 <br>
 <label>
-Direccion:
-<input type="text" name="Nombre" required pattern="[0-9]{7-15}" title="Porfavor Ingresar Menos de 40 caracteres">
+<p>Direccion  <input type="text"  sisze="30" maxlength="15" name="direccion" pattern="[A-Z 0-9a-z]{6,17}" title="minimo 6 y maximo 15 digitos" required></p>
 </label>
 <br>
-<br>
 <label>
-Telefono:
-<input type="text" name="Nombre" required pattern="[0-9]{5-10}" title="Porfavor Ingresar Menos de 40 caracteres solo numeros">
+<p>Tel.fijo  <input type="text" sisze="30" maxlength="7" name="fijo" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" title="digitos del 0-9 y maximo 7" required></p>
 </label>
 <br>
 <br>
 <label>
 Nombre del representante:
-<input type="email" name="Nombre" required="">
+<input type="text"  maxlength="15" name="Nombre" | pattern="[A-Z a-z]{6,15}" title="solo se aceptan letras y minimo 6 y maximo 15 letras" required>
 </label>
 <br>
 <br>
 <label>
 Apellido del representante:
-<input type="text" name="Nombre" required pattern="[A-Za-z]{5-25}" title="Porfavor Ingresar Menos de 40 caracteres solo letras">
+<input type="text"  maxlength="15" name="Nombre" | pattern="[A-Z a-z]{6,15}" title="solo se aceptan letras y minimo 6 y maximo 15 letras" required>
 </label>
 <br>
 <br>
 <label>
 T.documentos:
-<input type="text" name="Nombre" required>
-<br>
-<br>
-<label>
+<select required>
+  <option value="">TIPO</option>
+  <option value="volvo">C.C</option>
+  <option value="">T.I</option>
+  <option value="volvo">C.E</option>
+    </select>
+    <br>
+    <br>
 N.identificacion
-<input type="text" name="Nombre" required>
+<input type="text"  sisze="30" maxlength="10" name="documento"pattern="[0-9]{10}" title="solo se permiten numeros y debe tener 10 digitos " required>
 <br>
 <br>
 
