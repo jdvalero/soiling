@@ -17,11 +17,6 @@ h3{
   color: white;
   padding: 100px 20px;
 }
-.casa{
-  width: 30px;
-  height: 30px;
-  padding: 0px 0px;
-}
 header {
 	width:100%;
 	background:#fff;
@@ -114,7 +109,7 @@ li{
 	width: 11%;
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 0.0s;
+	transition: opacity 1.5s;
 	border-radius: 25px;
 }
 
