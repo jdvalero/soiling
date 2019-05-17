@@ -13,12 +13,10 @@ section{
 	background: linear-gradient(white, blue);
 }
 
-.atras{
-	margin: 1% 10%;
-	position: fixed;
-	padding: 1px 1px;
-	top: 30%;
 
+
+img{
+	float: left;
 }
 
 
