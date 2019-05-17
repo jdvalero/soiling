@@ -30,6 +30,7 @@
 			  	<ul class="submenu">
 			      <li><a href="Usuarios.html">Consulta de ususario</a></li>
 			      <li><a href="Proveedores.html">Consulta proveedor</a></li>
+						<li><a href="con_Almacen.html">Consulta almacen</a></li>
 			    </ul>
 			  </li>
 			  <li><a href="#">Gestiones</a>
@@ -60,38 +61,38 @@
 	</h1>
 
 
-<form action="Registro" method="post">
-<label>
-Codigo empresa:
-<input type="text" name="Nombre" required pattern="[A-Za-z0-9]{5-40}" title="Porfavor Ingresar Menos de 40 caracteres">
-</label>
-<br>
-<br>
-<label>
-Nombre contratista:
-<input type="text" name="Nombre" required pattern="[A-Za-z0-9]{5-40}" title="Porfavor Ingresar Menos de 40 caracteres">
-</label>
-<br>
-<br>
-<label>
-Apellido contratista:
-<input type="text" name="Nombre" required pattern="[0-9]{7-15}" title="Porfavor Ingresar Menos de 40 caracteres">
-</label>
-<br>
-<br>
-Digite su pedido :
-<br>
-<textarea cols="40" rows="8">
+	<form action="Registro" method="post">
+	<label>
+	Codigo empresa:
+	<input type="text"  sisze="30" maxlength="10" name="direccion" required>
+	</label>
+	<br>
+	<br>
+	<label>
+	Nombre contratista:
+	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	</label>
+	<br>
+	<br>
+	<label>
+	Apellido contratista:
+	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	</label>
+	<br>
+	<br>
+	Digite su pedido :
+	<br>
+	<textarea cols="40" rows="8" required>
 
-</textarea>
-<br>
-<br>
-<input type="submit" name="button" class="button" placeholder="Ingresar
-" value="Confirmar">
-<input type="submit" name="button" class="button" placeholder="Ingresar
-" value="Cancelar">	<br><br>
+	</textarea>
+	<br>
+	<br>
+	<input type="submit" name="button" class="button" placeholder="Ingresar
+	" value="Confirmar">
+	<input type="submit" name="button" class="button" placeholder="Ingresar
+	" value="Cancelar">	<br><br>
 
-</form>
+	</form>
 </div>
 </center>
 <br>

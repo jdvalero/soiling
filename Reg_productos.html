@@ -30,6 +30,7 @@
 			  	<ul class="submenu">
 			      <li><a href="Usuarios.html">Consulta de ususario</a></li>
 			      <li><a href="Proveedores.html">Consulta proveedor</a></li>
+						<li><a href="con_Almacen.html">Consulta almacen</a></li>
 			    </ul>
 			  </li>
 			  <li><a href="#">Gestiones</a>
@@ -62,72 +63,73 @@
   <div class="con">
     <br>
     <br>
-<form action="Registro_Procuto" method="post">
+		<form action="Registro_Procuto" method="post">
 
-  <table align="center" class="table">
-   <td>
-    Nombre:
-    <br> <input type="text" name="nombre" placeholder="Su nombre de usuario"
-         required pattern="[A-Za-z0-9]{5,40}"
-         title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 40">
-   </td>
+		  <table align="center" class="table">
+		   <td>
+		    Nombre:
+		    <br> <input type="text"  sisze="30" maxlength="20" name="nombres" pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+		   </td>
 
-   <td>
-    Codigo:
-    <br><input type="text" name="Nombre" size="41"  required="">
-   </td>
-   <tr></tr>
+		   <td>
+		    Codigo:
+		    <br><input type="text"  sisze="30" maxlength="15" name="direccion" pattern="[A-Z a-z]{6,17}" title="minimo 6 y maximo 15 digitos" required>
+		   </td>
+		   <tr></tr>
 
-   <td>
-    Valor:
-    <br><input type="text" name="valor" size="40"required="">
-   </td>
+		   <td>
+		    Valor:
+		    <br><input type="text"  sisze="30" maxlength="15" name="direccion" pattern="[A-Z a-z]{6,17}" title="minimo 6 y maximo 15 digitos" required>
+		   </td>
 
 
-   <td>
-   Categoria:
-   <br>
-   <select required="">
-  <option value="volvo">Material</option>
-  <option value="saab">Vehiculo</option>
-  <option value="mercedes">Respuesto</option>
-  <option value="audi">Articulo</option>
-   </select>
-   </td>
-    <tr></tr>
-      <td>
-     Cantidad:
-     <br>
-     <input name="uploadedfile" type="text" size="40" required="" />
-   </td>
+		   <td>
+		   Categoria:
+		   <br>
+		   <select required="">
+		   	<option value="volvo">Seleccione</option>
+		  <option value="volvo">Material</option>
+		  <option value="saab">Vehiculo</option>
+		  <option value="mercedes">Respuesto</option>
+		  <option value="audi">Articulo</option>
+		   </select>
+		   </td>
+		    <tr></tr>
+		      <td>
+		     Cantidad:
+		     <br>
+		     <input type="text" placeholder="numero de identidad" sisze="30" maxlength="20" name="documento" pattern="[0-9]{20}" title="solo se permiten numeros y debe tener 20 digitos " required>
+		   </td>
 
 
-   <td>
-     Proveedor:
-     <br>
-     <input name="uploadedfile" type="text" size="40" required pattern="[A-Za-z0-9]{5,40}"/>
-   </td>
-   <tr></tr>
-    <td>
-     Fecha:
-     <br>
-     <input name="uploadedfile" type="date" size="40" />
-   </td>
-  </table>
-  Comentario:
-  <br>
-  <textarea cols="100" rows="10" required pattern="[A-Za-z0-9]{5,40}">
+		   <td>
+		     Proveedor:
+		     <br>
+		     <input type="text"  maxlength="15" name="Nombre" | pattern="[A-Z a-z]{6,15}" title="solo se aceptan letras y minimo 6 y maximo 15 letras" required>
+		   </td>
+		   <tr></tr>
+		    <td>
+		     <p>Fecha de nacimiento</p>
 
-  </textarea>
-  <br>
-    <br>
-  <button class="button" type="submit">
-    Enviar
-  </button>
-   <button class="button">
-   Cancelar
-  </button>
-  </div>
+			<input type="date" name="fecha" min="1900-01-01"
+		                                  max="2001-04-01" step="2">
+		   </td>
+		  </table>
+		  Comentario:
+		  <br>
+		  <textarea cols="100" rows="10" required pattern="[A-Za-z0-9]{5,40}">
+
+		  </textarea>
+		  <br>
+		    <br>
+		  <button class="button" type="submit">
+		    Enviar
+		  </button>
+		   <button class="button">
+		   Cancelar
+		  </button>
+		  </div>
+		</form>
 	<br><br><br>
 	<section class="blue">
 

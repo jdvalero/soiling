@@ -30,6 +30,7 @@
 			  	<ul class="submenu">
 			      <li><a href="Usuarios.html">Consulta de ususario</a></li>
 			      <li><a href="Proveedores.html">Consulta proveedor</a></li>
+						<li><a href="con_Almacen.html">Consulta almacen</a></li>
 			    </ul>
 			  </li>
 			  <li><a href="#">Gestiones</a>
@@ -60,56 +61,55 @@ Registro Obras
 	</h1>
 
 
-<form action="Registro" method="post">
-<label>
-Nombre proyecto:
-<input type="text" name="Nombre" required pattern="[A-Za-z0-9]{5-40}" title="Porfavor Ingresar Menos de 40 caracteres">
-</label>
-<br>
-<br>
-<label>
-Ciudad:
-<input type="text" name="Nombre" required pattern="[A-Za-z0-9]{5-40}" title="Porfavor Ingresar Menos de 40 caracteres">
-</label>
-<br>
-<br>
-<label>
-Direccion:
-<input type="text" name="Nombre" required pattern="[0-9]{7-15}" title="Porfavor Ingresar Menos de 40 caracteres">
-</label>
-<br>
-<br>
-<label>
-Telefono:
-<input type="text" name="Nombre" required pattern="[0-9]{5-10}" title="Porfavor Ingresar Menos de 40 caracteres solo numeros">
-</label>
-<br>
-<br>
-<label>
-Responsable:
-<input type="email" name="Nombre" required="">
-</label>
-<br>
-<br>
-<label>
-Numero de trabajadores:
-<input type="text" name="Nombre" required pattern="[A-Za-z]{5-25}" title="Porfavor Ingresar Menos de 40 caracteres solo letras">
-</label>
-<br>
-<br>
-Comentarios:
-<br>
-<textarea cols="40" rows="6">
+	<form action="Registro" method="post">
+	<label>
+	Nombre proyecto:
+	<input type="text"  sisze="30" maxlength="20" name="nombres" pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	</label>
+	<br>
+	<br>
+	<label>
+	Ciudad:
+	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	</label>
+	<br>
+	<br>
+	<label>
+	Direccion:
+	<input type="text"  sisze="30" maxlength="10" name="direccion" required></label>
+	<br>
+	<br>
+	<label>
+	Telefono:
+	<input type="text" name="Nombre" required pattern="[0-9]{5-10}" title="Porfavor Ingresar Menos de 40 caracteres solo numeros">
+	</label>
+	<br>
+	<br>
+	<label>
+	Responsable:
+	<input type="email" name="Nombre" required="">
+	</label>
+	<br>
+	<br>
+	<label>
+	Numero de trabajadores:
+	<input type="text" placeholder="telefono fijo" sisze="30" maxlength="7" name="fijo" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" required>">
+	</label>
+	<br>
+	<br>
+	Comentarios:
+	<br>
+	<textarea cols="40" rows="6">
 
-</textarea>
-<br>
+	</textarea>
+	<br>
 
-<input type="submit" name="button" class="button" placeholder="Ingresar
-" value="Confirmar">
-<input type="submit" name="button" class="button" placeholder="Ingresar
-" value="Cancelar">	<br><br>
+	<input type="submit" name="button" class="button" placeholder="Ingresar
+	" value="Confirmar">
+	<input type="submit" name="button" class="button" placeholder="Ingresar
+	" value="Cancelar">	<br><br>
 
-</form>
+	</form>
 </div>
 </center>
 <br>
