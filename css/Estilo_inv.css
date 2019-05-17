@@ -12,6 +12,14 @@ h6{
 section{
 	background: linear-gradient(white, blue);
 }
+
+.atras{
+	position: absolute;
+	padding: 170px 150px;
+	text-align: right;
+
+}
+
 header {
 	width:100%;
 	background:#fff;
