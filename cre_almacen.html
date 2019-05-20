@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Pedido</title>
+		<title>Crear almacen</title>
 		<link rel="stylesheet" type="text/css" href="css/Estilo_reg_cli.css">
 	</head>
 	<body>
@@ -14,7 +14,7 @@
 			<nav class="nav">
 			<ul class="menu">
 
-				<li> <a href="index2.html">Inicio</a> </li>
+ 				<li> <a href="index2.html">Inicio</a> </li>
 
 			  <li><a href="#">Registros</a>
 				<ul class="submenu">
@@ -36,7 +36,7 @@
 			  </li>
 			  <li><a href="#">Gestiones</a>
 				<ul class="submenu">
-			  		<li><a href="inventario.html">Gestion de bodega</a></li>
+			  		<li><a href="inventario.html">Gestion de inventario</a></li>
 						<li><a href="Con_Pedidos.html">Control pedidos</a></li>
 			  		<li><a href="gestion-obras.html">Gestiones de obras</a></li>
 
@@ -58,36 +58,53 @@
 	<br>
 		<br>
 <h1>
-	Pedido
+Crear Almacen
 	</h1>
 
 
 	<form action="Registro" method="post">
 	<label>
-	Codigo empresa:
-	<input type="text"  sisze="30" maxlength="10" name="direccion" required>
+	Nombre proyecto:
+	<input type="text"  sisze="30" maxlength="20" name="nombres" pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
 	</label>
 	<br>
 	<br>
 	<label>
-	Nombre contratista:
+	Ciudad:
 	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
 	</label>
 	<br>
 	<br>
 	<label>
-	Apellido contratista:
-	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	Direccion:
+	<input type="text"  sisze="30" maxlength="10" name="direccion" required></label>
+	<br>
+	<br>
+	<label>
+	Telefono:
+	<input type="text" name="Nombre" required pattern="[0-9]{5-10}" title="Porfavor Ingresar Menos de 40 caracteres solo numeros">
 	</label>
 	<br>
 	<br>
-	Digite su pedido :
+	<label>
+	Responsable:
+	<input type="email" name="Nombre" required="">
+	</label>
 	<br>
-	<textarea cols="40" rows="8" required>
+	<br>
+	<label>
+	Numero de trabajadores:
+	<input type="text"  sisze="30" maxlength="7" name="fijo" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" required>
+	</label>
+	<br>
+	<br>
+	Comentarios:
+	<br>
+	<textarea cols="40" rows="6">
 
 	</textarea>
 	<br>
-	<br>
+
 	<input type="submit" name="button" class="button" placeholder="Ingresar
 	" value="Confirmar">
 	<input type="submit" name="button" class="button" placeholder="Ingresar
@@ -98,6 +115,7 @@
 </center>
 <br>
 <br>
+
 <br>
 <br><br><br>
 <center>
@@ -148,7 +166,7 @@
              </ul>
            </td>
             </table>
-						<br><br>
+						<br><br><br>
        <div class="footer">
             <p>Copyright (c) 2019</p>
        </div>
