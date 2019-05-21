@@ -143,6 +143,13 @@ li{
 	  background-color: white;
 
 }
+.container3{
+	box-shadow: 2px 2px 5px #999;
+	width: 450px;
+	height: 500px;
+	 border-radius:15px;
+	 background-color: white;
+}
 
 .derecha{
   float:left;

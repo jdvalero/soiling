@@ -134,6 +134,12 @@ li{
 	 height: 550px;
 
 }
+
+.container2{
+	box-shadow: 2px 2px 5px #999;
+	width: 450px;
+	height: 350px;
+}
 .button {
   background-color: #244AB0;
   color: white;
