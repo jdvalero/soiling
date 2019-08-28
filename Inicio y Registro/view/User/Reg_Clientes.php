@@ -2,7 +2,7 @@
   session_start();
 
   
-  if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 2 )  {
+  if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 3 )  {
 
     header('location: ../../index.php');
   }
@@ -24,9 +24,41 @@
 			</div>
 			<nav class="nav">
 			<ul class="menu">
-			 <li><a href="../../controller/cerrarSesion.php">Cerrar sesion</a></li>
 
-			</ul>
+        <li> <a href="../../../index_inicio.php">Inicio</a> </li>
+
+
+        <li><a href="#">Registros</a>
+        <ul class="submenu">
+
+          
+      
+          <li><a href="../../../Procesos/Producto/Reg_productos.php">Registrar producto</a></li>
+         
+          <li><a href="../../../Procesos/Pedidos/Pedido.php">Pedido</a></li>
+
+          <li><a href="#">R.Usuarios</a></li>
+          
+      
+        </ul>
+        </li>
+          <ul class="submenu">
+           
+           
+           
+        
+          </ul>
+        </li>
+        <li><a href="#">Gestiones</a>
+        <ul class="submenu">
+            <li><a href="../../../Procesos/Producto/Con_Producto.php">Gestion de bodega</a></li>
+            <li><a href="../../../Procesos/Pedidos/Con_Pedidos.php">Control pedidos</a></li>
+            
+        </ul>
+       </li>
+       <li><a href="../../../inicio y Registro/controller/cerrarSesion.php">Cerrar sesion</a></li>
+
+      </ul>
 
 		</nav>
 		</div>
@@ -52,6 +84,20 @@
 <form action="php/ingreso.php" method="post">
 
 <!–-------------------- Nombre–------------------>
+<label>TIdentificacion :</label>
+       <select required name="TI">
+        <option value="null">Seleccionar</option>
+      <option value="1">Cedula Ciudadania</option>
+      <option value="2">Cedula extranjera</option>
+      <option value="3">Nit</option>
+      <option value="4">Cedula de permanencia</option>
+       </select>
+<br><br>
+<label>
+  NIdentificacion:
+<input type="text" name="NI" maxlength="10" pattern="[0-9]{5,10}" title="ingrese  solo numeros minimo 5 maximo 10 caracteres" required>
+</label>
+<br><br>
 <p>Nombre y Apellido :<input type="text"  maxlength="15" name="Nombre" | pattern="[A-Z a-z]{6,15}" title="solo se aceptan letras y minimo 6 y maximo 15 letras" required>
 <br>
 <br>
@@ -61,24 +107,8 @@
 <!–-------------------- Telefono–------------------>
 <p>Telelefono :<input type="text" sisze="30" maxlength="7" name="Telefono" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" title="digitos del 0-9 y maximo 7" required></p>
 <br>
-<!–-------------------- Tipo de identificaiçcion–------------------>
-<label>TIdentificacion :</label>
-       <select required="">
-        <option value="null">Seleccionar</option>
-      <option value="CC">Cedula Ciudadania</option>
-      <option value="CE">Cedula extranjera</option>
-      <option value="NIT">Nit</option>
-      <option value="CP">Cedula de permanencia</option>
-       </select>
-<br><br>
-<label>
-<!–-------------------- Numero de identificaiçcion–------------------>
 
-NIdentificacion:
-<input type="text" name="NIdentificacion" maxlength="10" pattern="[0-9]{5,10}" title="ingrese  solo numeros minimo 5 maximo 10 caracteres" required>
-</label>
-<br>
-<br>
+
 <!–-------------------- Email –------------------>
 <label>
 Email:

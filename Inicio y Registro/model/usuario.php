@@ -64,14 +64,14 @@
         echo 'error_3';
       }else{
 
-        parent::query('insert into usuarios(nombre,email,clave,cargo) values ("'.$name.'", "'.$email.'", MD5("'.$clave.'"), null)');
+        parent::query('insert into usuarios(nombre,email,clave,cargo) values ("'.$name.'", "'.$email.'", MD5("'.$clave.'"), 3)');
 
         session_start();
 
         $_SESSION['nombre'] = $name;
-        $_SESSION['cargo']  = null;
+        $_SESSION['cargo']  = 3;
 
-        echo 'view/User/Reg_Clientes.php';
+        echo '../Inicio y Registro/index.php';
 
       }
 

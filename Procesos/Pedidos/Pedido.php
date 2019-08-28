@@ -14,7 +14,8 @@
 			<nav class="nav">
 			<ul class="menu">
 
-				<li> <a href="index2.html">Inicio</a> </li>
+
+<li> <a href="../../index_inicio.php">Inicio</a> </li>
 
 
         <li><a href="#">Registros</a>
@@ -22,10 +23,12 @@
 
           
       
-          <li><a href="../Productos/Reg_productos.php">Registrar producto</a></li>
+          <li><a href="../Producto/Reg_productos.php">Registrar producto</a></li>
          
-          <li><a href="../Pedidos/Pedido.php">Pedido</a></li>
-          <li><a href="cre_almacen.html">Crear Almacen</a></li>
+          <li><a href="#">Pedido</a></li>
+
+          <li><a href="../../Inicio y Registro/view/User/Reg_Clientes.php">R.Usuarios</a></li>
+          
       
         </ul>
         </li>
@@ -38,12 +41,12 @@
         </li>
         <li><a href="#">Gestiones</a>
         <ul class="submenu">
-            <li><a href="../Bodega/inventario.php">Gestion de bodega</a></li>
-            <li><a href="../Pedidos/Con_Pedidos.php">Control pedidos</a></li>
+            <li><a href="../Producto/Con_Producto.php">Gestion de bodega</a></li>
+            <li><a href="Con_Pedidos.php">Control pedidos</a></li>
             
         </ul>
        </li>
-       <li><a href="index.html">Cerrar sesion</a></li>
+       <li><a href="inicio y Registro/controller/cerrarSesion.php">Cerrar sesion</a></li>
 
       </ul>
 		</nav>
@@ -61,28 +64,24 @@
 	</h1>
 
 
-	<form action="Registro" method="post">
-	<label>
-	Codigo empresa:
-	<input type="text"  sisze="30" maxlength="10" name="direccion" required>
-	</label>
-	<br>
-	<br>
-	<label>
-	Nombre contratista:
-	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
-	</label>
-	<br>
-	<br>
-	<label>
-	Apellido contratista:
-	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
-	</label>
+	<form action="php/insertar.php" method="post">
+     <td>
+       
+       Obras:
+       <br>
+       <select required="" name="obra">
+        <option value="0">Seleccione</option>
+      <option value="1">chirajara</option>
+      <option value="2">bogota</option>
+       <option value="3">cauca</option>
+       </select>
+       </td>
+	
 	<br>
 	<br>
 	Digite su pedido :
 	<br>
-	<textarea cols="40" rows="8" required>
+	<textarea cols="40" rows="8" required name="pedido">
 
 	</textarea>
 	<br>
@@ -90,16 +89,11 @@
 	<input type="submit" name="button" class="button" placeholder="Ingresar
 	" value="Confirmar">
 	<input type="submit" name="button" class="button" placeholder="Ingresar
-	" value="Cancelar">	<br><br>
+	" value="Cancelar">	
 
 	</form>
 </div>
-</center>
-<br>
-<br>
-<br>
-<br><br><br>
-<center>
+
 <section class="blue">
 
   <div class="wrapper">

@@ -1,21 +1,38 @@
 <?php
 
-  require_once('../../../model/conexion.php');
+$id = $_SESSION['id'];
 
-  class DatosUsuario extends Conexion
-  {
 
-    public function add_cliente($nombre,$Direccion,$Telefono,$TipoI,$NumeroI,$Email)
+  class Registro
+
+{
+
+  public $TipoDocumento;
+  public $Doc_persona;
+  public $Nom_persona;
+  private $Direccion;
+  private $Telefono;
+  public $Email;
+
+
+    public function registrar($TipoDocumento, $Doc_persona, $Nom_persona, $Direccion, $Telefono, $Email)
     {
-      parent::conectar();
 
-        parent::query('insert into persona(Estado_idEstado,TipoDocumento_idTipoDocumento,TipoCargo_idUsuario,Doc_persona,Nom_persona,Direccion,Telefono,Email) 
-        values 
-        ("'1'","'.$TipoI.'", "'3'","'.$NumeroI.'","'.$nombre.'","'.$Direccion.'","'.$Telefono.'","'.$Email.'")');
+      include("../php/conexion.php");
 
+      $sql = "INSERT INTO persona (Estado_idEstado, TipoDocumento_idTipoDocumento, TipoCargo_idUsuario, Doc_persona, Nom_persona, Direccion, Telefono, Email) VALUES (1, '$TipoDocumento', 3, '$Doc_persona', '$Nom_persona', '$Direccion', '$Telefono', '$Email')";
+
+       if (!$result = $db->query($sql)) 
+      {
+        die('hay un error corriendo en la consulta o datos encontrados!!! [' .$db->error .']');
+      }
+      else{
+        header("location:../../../../Index_Inicio.php");
       }
 
-      parent::cerrar();
     }
+    
+}
+
 
 ?>

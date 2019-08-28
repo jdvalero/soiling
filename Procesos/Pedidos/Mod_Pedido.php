@@ -1,3 +1,14 @@
+<?php 
+
+	require_once "../Conexion/conexion.php";
+	$obj= new conectar();
+	$conexion=$obj->conexion();
+	$id=$_GET['id'];
+	$sql="SELECT *
+			from producto where idProducto='$id'";
+	$result=mysqli_query($conexion,$sql);
+	$ver=mysqli_fetch_row($result);
+ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,7 +25,7 @@
 			<nav class="nav">
 			<ul class="menu">
 
-				<li> <a href="../../index_inicio.php">Inicio</a> </li>
+				<li> <a href="index2.html">Inicio</a> </li>
 
 
         <li><a href="#">Registros</a>
@@ -25,9 +36,7 @@
           <li><a href="../Productos/Reg_productos.php">Registrar producto</a></li>
          
           <li><a href="../Pedidos/Pedido.php">Pedido</a></li>
-
-          <li><a href="../../Inicio y Registro/view/User/Reg_Clientes.php">R.Usuarios</a></li>
-          
+          <li><a href="cre_almacen.html">Crear Almacen</a></li>
       
         </ul>
         </li>
@@ -40,12 +49,12 @@
         </li>
         <li><a href="#">Gestiones</a>
         <ul class="submenu">
-            <li><a href="Con_Producto.php">Gestion de bodega</a></li>
+            <li><a href="../Bodega/inventario.php">Gestion de bodega</a></li>
             <li><a href="../Pedidos/Con_Pedidos.php">Control pedidos</a></li>
             
         </ul>
        </li>
-       <li><a href="inicio y Registro/controller/cerrarSesion.php">Cerrar sesion</a></li>
+       <li><a href="index.html">Cerrar sesion</a></li>
 
       </ul>
 
@@ -66,30 +75,31 @@
   <div class="con">
     <br>
     <br>
-		<form action="php/insertar.php" method="post">
+		<form action="php/actualizar.php" method="post">
 
 		  <table align="center" class="table">
+		  	<input type="text" hidden="" value="<?php echo $id ?>" name="id">
 		   <td>
 		    Nombre:
-		    <br> <input type="text"  sisze="30" maxlength="20" name="nombres"  title="solo se aceptan letras y minimo 6 letras" required>
+		    <br> <input type="text"  sisze="30" maxlength="20" name="nombres"  title="solo se aceptan letras y minimo 6 letras" required value="<?php echo $ver[4] ?>">
 		   </td>
 
 		   <td>
 		   Saldo:
-		    <br><input type="text"  sisze="30" maxlength="15" name="Saldo" title="minimo 6 y maximo 15 digitos" required>
+		    <br><input type="text"  sisze="30" maxlength="15" name="Saldo" title="minimo 6 y maximo 15 digitos" required value="<?php echo $ver[6] ?>">
 		   </td>
 		   <tr></tr>
 
 		   <td>
 		    Valor:
-		    <br><input type="text"  sisze="30" maxlength="15" name="Valor" title="minimo 6 y maximo 15 digitos" required>
+		    <br><input type="text"  sisze="30" maxlength="15" name="Valor" title="minimo 6 y maximo 15 digitos" required value="<?php echo $ver[7] ?>"> 
 		   </td>
 
 
 		   <td>
 		   Categoria:
 		   <br>
-		   <select required="" name="Categoria">
+		   <select required="" name="Categoria"  >
 		   	<option value="0">Seleccione</option>
 		  <option value="1">Tornillo </option>
 		  <option value="2">Tuerca</option>
@@ -99,26 +109,16 @@
 		      <td>
 		     Ubicacion:
 		     <br>
-		     <input type="text" placeholder="ubicacion" sisze="30" maxlength="20" name="ubicacion" title="solo se permiten numeros y debe tener 20 digitos " required>
+		     <input type="text" placeholder="ubicacion" sisze="30" maxlength="20" name="ubicacion" title="solo se permiten numeros y debe tener 20 digitos " required value="<?php echo $ver[8] ?>">
 		   </td>
 
 
 		   <td>
 		     IVA:
 		     <br>
-		     <input type="text"  maxlength="15" name="iva"  title="solo se aceptan letras y minimo 6 y maximo 15 letras" required>
+		     <input type="text"  maxlength="15" name="iva"  title="solo se aceptan letras y minimo 6 y maximo 15 letras" required value="<?php echo $ver[9] ?>">
 		   </td>
 		   <tr></tr>
-		    <td>
-		   Bodega:
-		   <br>
-		   <select required="">
-		   	<option value="volvo">Seleccione</option>
-		  <option value="volvo">Chirajara</option>
-		  <option value="saab">Bogota</option>
-		  <option value="mercedes">La grande</option>
-		  <option value="audi">Madrid</option>
-		   </select>
 		   </td>
 		    <td>
 		   Marca:
@@ -144,15 +144,15 @@
 		  </table>
 		  Descripcion:
 		  <br>
-		  <textarea cols="100" rows="5" required  name="txtDesc">
+		  <input type="text"  cols="100" rows="5" required  name="txtDesc" value="<?php echo $ver[5] ?>">
 
-		  </textarea>
+		 
 		  <br>
 		  Comentario:
 		 <br>
-		  <textarea cols="100" rows="5" required  name="txtCom">
+		  <input type="text" cols="100" rows="5" required  name="txtCom" value="<?php echo $ver[10] ?>">
 
-		  </textarea>
+		
 		  <br>
 		    <br>
 		  <button class="button" type="submit">

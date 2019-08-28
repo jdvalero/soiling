@@ -6,7 +6,7 @@
     header('location: ../view/admin/index_inicio.php');
     
   }else if($_SESSION['cargo'] == 2){
-    header('location: ../view/User/Reg_Clientes.php');
+    header('location: ../../index_inicio.php');
 
     
   }elseif($_SESSION['cargo'] == 3){

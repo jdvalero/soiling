@@ -1,20 +1,26 @@
+6<?php 
+  require_once "../Conexion/conexion.php";
+  require_once "Clases/Pedidos.php";
+ ?>
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Pedidos</title>
-		<link rel="stylesheet" type="text/css" href="../../css/Estilo_inv.css">
-	</head>
-	<body>
+  <head>
+    <title>Inventario</title>
+    <link rel="stylesheet" type="text/css" href="../../css/Estilo_inv.css">
+  </head>
+  <body>
 
-		<header >
-		<div class="wrapper1">
-			<div class="logo1">
-				Soiling
-			</div>
-			<nav class="nav">
-			<ul class="menu">
+    <header >
+    <div class="wrapper1">
+      <div class="logo1">
+        Soiling
+      </div>
+      <nav class="nav">
+      <ul class="menu">
 
-				<li> <a href="index2.html">Inicio</a> </li>
+
+<li> <a href="../../index_inicio.php">Inicio</a> </li>
 
 
         <li><a href="#">Registros</a>
@@ -22,10 +28,12 @@
 
           
       
-          <li><a href="../Productos/Reg_productos.php">Registrar producto</a></li>
+          <li><a href="Reg_productos.php">Registrar producto</a></li>
          
           <li><a href="../Pedidos/Pedido.php">Pedido</a></li>
-          <li><a href="cre_almacen.html">Crear Almacen</a></li>
+
+          <li><a href="../../Inicio y Registro/view/User/Reg_Clientes.php">R.Usuarios</a></li>
+          
       
         </ul>
         </li>
@@ -38,168 +46,78 @@
         </li>
         <li><a href="#">Gestiones</a>
         <ul class="submenu">
-            <li><a href="../Bodega/inventario.php">Gestion de bodega</a></li>
+            <li><a href="#">Gestion de bodega</a></li>
             <li><a href="../Pedidos/Con_Pedidos.php">Control pedidos</a></li>
             
         </ul>
        </li>
-       <li><a href="index.html">Cerrar sesion</a></li>
+       <li><a href="../../inicio y Registro/controller/cerrarSesion.php">Cerrar sesion</a></li>
 
       </ul>
 
-		</nav>
-		</div>
-	</header>
-
-
-<br><br><br><br><br><br><br>
+    </nav>
+    </div>
+  </header>
+<br><br><br>
+<section>
+<br>
+<br><br><br><br>
 <center>
 <div class="container">
-	<br>
+  <br>
 
-	<h1>Pedidos</h1>
-	<br>
-
-	<input class="derecha" type="text" name=" Buscar" placeholder="Buscar
-	">
-
-	<br>
-		<br>
-	<table style="width:100%">
+  <h1>Consulta Bodega</h1>
+  <br>
+       <br>
+       <select required="" class="derecha">
+        <option value="volvo">Seleccionar Bodega</option>
+      <option value="volvo">Chirajara</option>
+      <option value="saab">Bogota</option>
+      <option value="mercedes">La grande</option>
+      <option value="audi">Madrid</option>
+       </select>
+  <br>
+    <br>
+  <table style="width:100%" >
   <tr>
-    <th>Codigo obras</th>
-    <th>Nombre contratista</th>
-    <th>Apellido contratista</th>
-    <th>Categoria</th>
+    <th>idPedido</th>
+    <th>Persona_idPersona</th>
+    <th>Obras_idObras</th>
     <th>Pedido</th>
+    
+<?php 
+  $obj= new pedidos();
+  $sql="SELECT * from pedidos join obras on pedidos.Obras_idObras=obras.idObra";
+  $datos=$obj->pedido($sql);
+  var_dump($datos);
 
-  </tr>
+
+  foreach ($datos as $key ) {
+ ?>
   <tr>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
+    <td><?php echo $key['idPedidos']; ?></td>
+    <td><?php echo $key['Persona_idPersona']; ?></td>
+    <td><?php echo $key['Obras_idObra']; ?></td>
+    <td><?php echo $key['Pedido']; ?></td>
+    
+    <td>
+      <a href="Mod_Pedido.php?id=<?php echo $key['idPedidos'] ?>">
+      Editar
+      </a>
+    </td>
+    <td>
+      <a href="php/eliminar.php?id=<?php echo $key['idProducto'] ?>">
+      eliminar
+      </a>
+    </td>
   </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr> <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr> <tr>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr> <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
-  <tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr><tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr><tr>
-     <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-    <th>x</th>
-     <th> <a href="modificar-pedido.html"> <input  class="button" type="Submit" name="Modificar"  value="Modificar"></a></th>
-    <th><input class="button" type="Submit" name="Modificar" value="Cambiar estado"></th>
-  </tr>
+<?php 
+  }
+ ?>
 </table>
-
 </form>
 </div>
-<br>
+
 <br>
 <br>
 <section class="blue">
@@ -210,7 +128,7 @@
                 <br>
               <td colspan="2">
 
-                <img src="imagenes/Logo_SOILING_Light.png">
+                <img src="../../imagenes/Logo_SOILING_Light.png">
               </td>
 
            <td>
@@ -249,11 +167,11 @@
              </ul>
            </td>
             </table>
-						<br><br>
+            <br><br>
        <div class="footer">
             <p>Copyright (c) 2019</p>
        </div>
        </section>
-</center>
-	</body>
+
+  </body>
 </html>

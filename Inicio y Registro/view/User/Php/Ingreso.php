@@ -1,8 +1,15 @@
 <?php
-include
 
-$alta = new Alta_cliente();
+	require_once ('../Clase/DatosUser.php');
+	
 
-$alta->add_cliente($_POST["nom"],$_POST["ape"],$_POST["emp"],$_POST["dir"],$_POST["email"],$_POST["tel"],$_POST["tipo_cliente"]);
+	$nuevo=new Registro();
+	$nuevo->registrar($_POST["TI"], $_POST["NI"], $_POST["Nombre"], $_POST["direccion"], $_POST["Telefono"], $_POST["Email"]);
+
+
+
+    
+    
+
 
 ?>

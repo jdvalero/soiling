@@ -27,15 +27,15 @@
         <li> <a href="#">Inicio</a> </li>
         <li><a href="#">Obras</a>
         <ul class="submenu">
-          <li><a href="Procesos/Obras/reg_Obras.html">Registrar Obra</a></li>
-          <li><a href="Procesos/Obras/Mod_Obra.html">Modificar Obra</a></li>
-          <li><a href="Procesos/Obras/Con_Obra.html">Consultar Obra</a></li>
+          <li><a href="Procesos/Obras/reg_Obras.php">Registrar Obra</a></li>
+          <li><a href="Procesos/Obras/Mod_Obra.php">Modificar Obra</a></li>
+          <li><a href="Procesos/Obras/Con_Obra.php">Consultar Obra</a></li>
         </ul>
         </li>
          <li><a href="#">Usuarios</a>
           <ul class="submenu">
-            <li><a href="Procesos/Usuarios/Con_Usuario.html">Consulta Usuario</a></li>
-          <li><a href="Procesos/Usuarios/Mod_Usuario.html">Modificar Usuario</a></li>
+            <li><a href="Procesos/Usuarios/Con_Usuario.php">Consulta Usuario</a></li>
+          <li><a href="Procesos/Usuarios/Mod_Usuario.php">Modificar Usuario</a></li>
         </ul>
        </li>
          <li><a href="../../controller/cerrarSesion.php">Cerrar sesion</a></li>

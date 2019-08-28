@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Modificar de obras</title>
+		<title>Registro de obras</title>
 		<link rel="stylesheet" type="text/css" href="../../../../../css/Estilo_reg_cli.css">
 	</head>
 	<body>
@@ -11,21 +11,21 @@
 			<div class="logo1">
 				Soiling
 			</div>
-			<nav class="nav">
+		<nav class="nav">
       <ul class="menu">
 
-        <li> <a href="../../Index_Inicio.html">Inicio</a> </li>
+        <li> <a href="../../Index_Inicio.php">Inicio</a> </li>
         <li><a href="#">Obras</a>
         <ul class="submenu">
-          <li><a href="reg_Obras.html">Registrar Obra</a></li>
-          <li><a href="Mod_Obra.html">Modificar Obra</a></li>
-          <li><a href="Con_Obra.html">Consultar Obra</a></li>
+          <li><a href="reg_Obras.php">Registrar Obra</a></li>
+          <li><a href="Mod_Obra.php">Modificar Obra</a></li>
+          <li><a href="Con_Obra.php">Consultar Obra</a></li>
         </ul>
         </li>
          <li><a href="#">Usuarios</a>
           <ul class="submenu">
-            <li><a href="../Usuarios/Con_Usuarios.html">Consulta Usuario</a></li>
-          <li><a href="../Usuarios/Mod_Usuario.html">Modificar Usuario</a></li>
+            <li><a href="../Usuarios/Con_Usuarios.php">Consulta Usuario</a></li>
+          <li><a href="../Usuarios/Mod_Usuario.php">Modificar Usuario</a></li>
         </ul>
        </li>
         <li><a href="../../../../controller/cerrarSesion.php">Cerrar sesion</a></li>
@@ -43,30 +43,25 @@
 	<br>
 		<br>
 <h1>
-Modificar Obras
+Crear Obras
 	</h1>
 <br><br>
-	<form action="Registro" method="post">
-		<label>
-	ID:
-	<input type="text"  sisze="10" maxlength="20" name="nombres" pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
-	</label>
-	<br><br>
+	<form action="php/ingreso.php" method="post">
 	<label>
 	Nombre proyecto:
-	<input type="text"  sisze="30" maxlength="20" name="nombres" pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	<input type="text"  sisze="30" maxlength="20" name="nombre" pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
 	</label>
 	<br>
 	<br>
 	<label>
 	Ciudad:
-	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	<input type="text"  sisze="30" maxlength="20" name="ciudad"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
 	</label>
 	<br>
 	<br>
 	<label>
 	Departamento:
-	<input type="text"  sisze="30" maxlength="20" name="nombres"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+	<input type="text"  sisze="30" maxlength="20" name="departamento"pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
 	</label>
 	<br>
 	<br>
@@ -79,24 +74,21 @@ Modificar Obras
 	<label>
 	Responsable:
 	    <select required="">
-        <option value="volvo">Seleccionar Responsable</option>
-      <option value="volvo">Tulio</option>
-      <option value="saab">Julio</option>
-      <option value="mercedes">Camargo</option>
-      <option value="audi">Carlitos</option>
+        <option name="responsable">Seleccionar Responsable</option> 
+      
        </select>
 	</label>
 	<br>
 	<br>
 	<label>
 	Fecha De inicio:
-	<input type="date" placeholder="telefono fijo" sisze="30" maxlength="7" name="fijo" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" required>
+	<input type="date" placeholder="telefono fijo" sisze="30" maxlength="7" name="inicio" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" required>
 	</label>
 	<br>
 	<br>
 	<label>
 	Fecha De FIN:
-	<input type="date" placeholder="telefono fijo" sisze="30" maxlength="7" name="fijo" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" required>
+	<input type="date" placeholder="telefono fijo" sisze="30" maxlength="7" name="fin" pattern="[0-9]{7}" title="solo se aceptan numros y 7 digitos" required>
 	</label>
 	<br>
 	<br>
