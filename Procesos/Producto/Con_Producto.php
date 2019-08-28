@@ -129,7 +129,7 @@
 </table>
 </form>
 </div>
-
+<a href="../../reportes/index.php">reporte</a>
 <br>
 <br>
 <section class="blue">

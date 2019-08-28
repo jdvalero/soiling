@@ -13,6 +13,14 @@
 <html>
 	<head>
 		<title>Registro Clientes</title>
+    <input type="text" name="usuario" value="<?php echo $_SESSION['id'] ?>" hidden="">
+    <?php require_once "../../../Procesos/Conexion/conexion.php"; 
+    $c= new conectar();
+    $conexion=$c->conexion();
+    $sql="SELECT idTipoDocumento,NomDocumento
+    from tipodocumento";
+    $result=mysqli_query($conexion,$sql);
+    ?>
 		<link rel="stylesheet" type="text/css" href="../../../css/Estilo_reg_cli.css">
 	</head>
 	<body>
@@ -85,13 +93,17 @@
 
 <!–-------------------- Nombre–------------------>
 <label>TIdentificacion :</label>
-       <select required name="TI">
-        <option value="null">Seleccionar</option>
-      <option value="1">Cedula Ciudadania</option>
-      <option value="2">Cedula extranjera</option>
-      <option value="3">Nit</option>
-      <option value="4">Cedula de permanencia</option>
-       </select>
+       <select class="form-control input-sm" id="TISelectU" name="TI">
+      <option value="A">Tipo Identificacion</option>
+      <?php 
+     $sql="SELECT idTipoDocumento,NomDocumento
+    from tipodocumento";
+      $result=mysqli_query($conexion,$sql);
+      ?>
+      <?php while($ver=mysqli_fetch_row($result)): ?>
+      <option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
+      <?php endwhile; ?>
+      </select>
 <br><br>
 <label>
   NIdentificacion:

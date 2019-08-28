@@ -66,7 +66,7 @@
 <div class="container">
   <br>
 
-  <h1>Consulta Bodega</h1>
+  <h1>Consulta Pedidos</h1>
   <br>
        <br>
        <select required="" class="derecha">
@@ -100,12 +100,12 @@
     <td><?php echo $key['Pedido']; ?></td>
   
     <td>
-      <a href="Mod_Pedido.php?id=<?php echo $key['idProducto'] ?>">
+      <a href="Mod_Pedido.php?id=<?php echo $key['idPedidos'] ?>">
       Editar
       </a>
     </td>
     <td>
-      <a href="php/eliminar.php?id=<?php echo $key['idProducto'] ?>">
+      <a href="php/eliminar.php?id=<?php echo $key['idPedidos'] ?>">
       eliminar
       </a>
     </td>

@@ -1,7 +1,38 @@
+<?php 
+session_start();
+if(isset($_SESSION['id'])){
+   }
+
+  ?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Registro productos</title>
+		<input type="text" name="usuario" value="<?php echo $_SESSION['id'] ?>" hidden="">
+    <?php require_once "../Conexion/conexion.php"; 
+    $c= new conectar();
+    $conexion=$c->conexion();
+    $sql="SELECT idUnidademedida,Nom_medida
+    from unidademedida";
+    $result=mysqli_query($conexion,$sql);
+    ?>
+    <?php require_once "../Conexion/conexion.php"; 
+    $c= new conectar();
+    $conexion=$c->conexion();
+    $sql="SELECT idMarca,Nom_marca
+    from marca";
+    $result=mysqli_query($conexion,$sql);
+    ?>
+    <?php require_once "../Conexion/conexion.php"; 
+    $c= new conectar();
+    $conexion=$c->conexion();
+    $sql="SELECT IdCategoria,Nom_categoria
+    from categoria";
+    $result=mysqli_query($conexion,$sql);
+    ?>     
+   
 		<link rel="stylesheet" type="text/css" href="../../css/Estilo_inv.css">
 	</head>
 	<body>
@@ -89,11 +120,17 @@
 		   <td>
 		   Categoria:
 		   <br>
-		   <select required="" name="Categoria">
-		   	<option value="0">Seleccione</option>
-		  <option value="1">Tornillo </option>
-		  <option value="2">Tuerca</option>
-		   </select>
+		   <select class="form-control input-sm" id="categoriaSelectU" name="Categoria">
+			<option value="A">Selecciona marca</option>
+			<?php 
+			$sql="SELECT IdCategoria,Nom_categoria
+    		from categoria";
+			$result=mysqli_query($conexion,$sql);
+			?>
+			<?php while($ver=mysqli_fetch_row($result)): ?>
+			<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
+			<?php endwhile; ?>
+			</select>
 		   </td>
 		    <tr></tr>
 		      <td>
@@ -123,23 +160,34 @@
 		    <td>
 		   Marca:
 		   <br>
-		   <select required="" name="marca">
-		   	<option value="0">Seleccione</option>
-		  <option value="1">Torniplex</option>
-		  <option value="2">Tornimax</option>
->
-		   </select>
+		  	 <select class="form-control input-sm" id="marcaSelectU" name="marca">
+			<option value="A">Selecciona marca</option>
+			<?php 
+			$sql="SELECT idMarca,Nom_marca
+    		from marca";
+			$result=mysqli_query($conexion,$sql);
+			?>
+			<?php while($ver=mysqli_fetch_row($result)): ?>
+			<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
+			<?php endwhile; ?>
+			</select>
 		   </td>
 		    <tr></tr>
 		    <td>
 		   Unida de medida:
 		   <br>
-		   <select required="" name="Medida">
-		  <option value="0">Ninguna</option>
-		  <option value="1">Cm</option>
-		  <option value="2">Mtros</option>
-		  <option value="3">MM</option>
-		   </select>
+
+		   <select class="form-control input-sm" id="unidadSelectU" name="Medida">
+			<option value="A">Selecciona unidad</option>
+			<?php 
+			$sql="SELECT idUnidademedida,Nom_medida
+   			 from unidademedida";
+			$result=mysqli_query($conexion,$sql);
+			?>
+			<?php while($ver=mysqli_fetch_row($result)): ?>
+			<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
+			<?php endwhile; ?>
+			</select>
 		  
 		  </table>
 		  Descripcion:
