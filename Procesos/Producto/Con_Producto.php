@@ -1,7 +1,6 @@
 <?php 
-  require_once "php/conexion.php";
-  require_once "php/metodosCrud.php";
-
+  require_once "../Conexion/conexion.php";
+  require_once "Clases/Producto.php";
  ?>
 
 <!DOCTYPE html>
@@ -27,29 +26,32 @@
         <li><a href="#">Registros</a>
         <ul class="submenu">
 
-          
-      
-          <li><a href="../Productos/Reg_productos.php">Registrar producto</a></li>
-         
-          <li><a href="../Pedidos/Pedido.php">Pedido</a></li>
+          <li><a href="Reg_Clientes.html">Registrar cliente</a></li>
+          <li><a href="Reg_proveedores.html">Registrar proveedor</a></li>
+          <li><a href="Reg_productos.html">Registrar producto</a></li>
+          <li><a href="Reg_obras.html">Registro de obras</a></li>
+          <li><a href="pedido.html">Pedido</a></li>
           <li><a href="cre_almacen.html">Crear Almacen</a></li>
-      
+          <li><a href="Caja-menor.html">Crear caja menor</a></li>
         </ul>
         </li>
+         <li><a href="#">Consultas</a>
           <ul class="submenu">
-           
-           
-           
-        
+            <li><a href="Usuarios.html">Consulta de ususario</a></li>
+            <li><a href="Proveedores.html">Consulta proveedor</a></li>
+            <li><a href="con_Almacen.html">Consulta almacen</a></li>
+            <li><a href="consultar-cliente.html">Consulta cliente</a></li>
           </ul>
         </li>
         <li><a href="#">Gestiones</a>
         <ul class="submenu">
-            <li><a href="../Bodega/inventario.php">Gestion de bodega</a></li>
-            <li><a href="../Pedidos/Con_Pedidos.php">Control pedidos</a></li>
-            
+            <li><a href="inventario.html">Gestion de bodega</a></li>
+            <li><a href="Con_Pedidos.html">Control pedidos</a></li>
+            <li><a href="gestion-obras.html">Gestiones de obras</a></li>
+            <li><a href="Gestion-caja-menor.html">Caja menor</a></li>
         </ul>
        </li>
+       <li><a href="Factura.html">Factura</a></li>
        <li><a href="index.html">Cerrar sesion</a></li>
 
       </ul>
@@ -91,17 +93,17 @@
       <th>IVA</th>
        <th>Comentario</th>
 <?php 
-  $obj= new metodos();
-  $sql="SELECT * from producto";
-  $datos=$obj->mostrarDatos($sql);
+  $obj= new Producto();
+  $sql="SELECT * from producto join unidademedida on producto.Unidademedida_idUnidademedida=unidademedida.idUnidademedida join Categoria on producto.Categoria_IdCategoria = Categoria.idCategoria join marca on producto.Marca_idMarca = marca.idMarca";
+  $datos=$obj->ConsultarProduto($sql);
 
   foreach ($datos as $key ) {
  ?>
   <tr>
     <td><?php echo $key['idProducto']; ?></td>
-    <td><?php echo $key['Unidademedida_idUnidademedida']; ?></td>
-    <td><?php echo $key['Categoria_IdCategoria']; ?></td>
-    <td><?php echo $key['Marca_idMarca']; ?></td>
+    <td><?php echo $key['Nom_medida']; ?></td>
+    <td><?php echo $key['Nom_categoria']; ?></td>
+    <td><?php echo $key['Nom_marca']; ?></td>
     <td><?php echo $key['Nom_producto']; ?></td>
     <td><?php echo $key['Descripcion']; ?></td>
      <td><?php echo $key['Saldo']; ?></td>

@@ -1,3 +1,14 @@
+<?php 
+
+	require_once "../Conexion/conexion.php";
+	$obj= new conectar();
+	$conexion=$obj->conexion();
+	$id=$_GET['id'];
+	$sql="SELECT *
+			from producto where idProducto='$id'";
+	$result=mysqli_query($conexion,$sql);
+	$ver=mysqli_fetch_row($result);
+ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -64,91 +75,84 @@
   <div class="con">
     <br>
     <br>
-		<form action="Registro_Procuto" method="post">
+		<form action="php/actualizar.php" method="post">
 
 		  <table align="center" class="table">
+		  	<input type="text" hidden="" value="<?php echo $id ?>" name="id">
 		   <td>
 		    Nombre:
-		    <br> <input type="text"  sisze="30" maxlength="20" name="nombres" pattern="[A-Za-z]{6,}" title="solo se aceptan letras y minimo 6 letras" required>
+		    <br> <input type="text"  sisze="30" maxlength="20" name="nombres"  title="solo se aceptan letras y minimo 6 letras" required value="<?php echo $ver[4] ?>">
 		   </td>
 
 		   <td>
-		    Codigo:
-		    <br><input type="text"  sisze="30" maxlength="15" name="direccion" pattern="[A-Z a-z]{6,17}" title="minimo 6 y maximo 15 digitos" required>
+		   Saldo:
+		    <br><input type="text"  sisze="30" maxlength="15" name="Saldo" title="minimo 6 y maximo 15 digitos" required value="<?php echo $ver[6] ?>">
 		   </td>
 		   <tr></tr>
 
 		   <td>
 		    Valor:
-		    <br><input type="text"  sisze="30" maxlength="15" name="direccion" pattern="[A-Z a-z]{6,17}" title="minimo 6 y maximo 15 digitos" required>
+		    <br><input type="text"  sisze="30" maxlength="15" name="Valor" title="minimo 6 y maximo 15 digitos" required value="<?php echo $ver[7] ?>"> 
 		   </td>
 
 
 		   <td>
 		   Categoria:
 		   <br>
-		   <select required="">
-		   	<option value="volvo">Seleccione</option>
-		  <option value="volvo">Material</option>
-		  <option value="saab">Vehiculo</option>
-		  <option value="mercedes">Respuesto</option>
-		  <option value="audi">Articulo</option>
+		   <select required="" name="Categoria"  >
+		   	<option value="0">Seleccione</option>
+		  <option value="1">Tornillo </option>
+		  <option value="2">Tuerca</option>
 		   </select>
 		   </td>
 		    <tr></tr>
 		      <td>
-		     cantidad:
+		     Ubicacion:
 		     <br>
-		     <input type="text" placeholder="numero de identidad" sisze="30" maxlength="20" name="documento" pattern="[0-9]{20}" title="solo se permiten numeros y debe tener 20 digitos " required>
+		     <input type="text" placeholder="ubicacion" sisze="30" maxlength="20" name="ubicacion" title="solo se permiten numeros y debe tener 20 digitos " required value="<?php echo $ver[8] ?>">
 		   </td>
 
 
 		   <td>
 		     IVA:
 		     <br>
-		     <input type="text"  maxlength="15" name="Nombre" | pattern="[A-Z a-z]{6,15}" title="solo se aceptan letras y minimo 6 y maximo 15 letras" required>
+		     <input type="text"  maxlength="15" name="iva"  title="solo se aceptan letras y minimo 6 y maximo 15 letras" required value="<?php echo $ver[9] ?>">
 		   </td>
 		   <tr></tr>
-		    <td>
-		   Bodega:
-		   <br>
-		   <select required="">
-		   	<option value="volvo">Seleccione</option>
-		  <option value="volvo">Chirajara</option>
-		  <option value="saab">Bogota</option>
-		  <option value="mercedes">La grande</option>
-		  <option value="audi">Madrid</option>
-		   </select>
 		   </td>
 		    <td>
 		   Marca:
 		   <br>
-		   <select required="">
-		   	<option value="volvo">Seleccione</option>
-		  <option value="volvo">Kawasaki</option>
-		  <option value="saab">Yamaha</option>
-		  <option value="mercedes">Michelini</option>
-		  <option value="audi">Tornillos lamara villa</option>
+		   <select required="" name="marca">
+		   	<option value="0">Seleccione</option>
+		  <option value="1">Torniplex</option>
+		  <option value="2">Tornimax</option>
+>
 		   </select>
 		   </td>
 		    <tr></tr>
 		    <td>
 		   Unida de medida:
 		   <br>
-		   <select required="">
-		   	<option value="volvo">Seleccione</option>
-		  <option value="volvo">Ninguna</option>
-		  <option value="saab">Cm</option>
-		  <option value="mercedes">Mtros</option>
-		  <option value="audi">MM</option>
+		   <select required="" name="Medida">
+		  <option value="0">Ninguna</option>
+		  <option value="1">Cm</option>
+		  <option value="2">Mtros</option>
+		  <option value="3">MM</option>
 		   </select>
 		  
 		  </table>
 		  Descripcion:
 		  <br>
-		  <textarea cols="100" rows="10" required pattern="[A-Za-z0-9]{5,40}">
+		  <input type="text"  cols="100" rows="5" required  name="txtDesc" value="<?php echo $ver[5] ?>">
 
-		  </textarea>
+		 
+		  <br>
+		  Comentario:
+		 <br>
+		  <input type="text" cols="100" rows="5" required  name="txtCom" value="<?php echo $ver[10] ?>">
+
+		
 		  <br>
 		    <br>
 		  <button class="button" type="submit">
