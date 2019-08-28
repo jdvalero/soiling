@@ -1,7 +1,23 @@
+<?php 
+session_start();
+if(isset($_SESSION['id'])){
+   }
+
+  ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Pedido</title>
+
+    <input type="text" name="usuario" value="<?php echo $_SESSION['id'] ?>" hidden="">
+    <?php require_once "../Conexion/conexion.php"; 
+    $c= new conectar();
+    $conexion=$c->conexion();
+    $sql="SELECT idObra,NomObra
+    from obras";
+    $result=mysqli_query($conexion,$sql);
+    ?>
 		<link rel="stylesheet" type="text/css" href="../../css/Estilo_reg_cli.css">
 	</head>
 	<body>
@@ -65,18 +81,17 @@
 
 
 	<form action="php/insertar.php" method="post">
-     <td>
-       
+    <input type="text" name="usuario" value="<?php echo $_SESSION['id'] ?>" hidden="">
+     
+      
        Obras:
-       <br>
-       <select required="" name="obra">
-        <option value="0">Seleccione</option>
-      <option value="1">chirajara</option>
-      <option value="2">bogota</option>
-       <option value="3">cauca</option>
-       </select>
-       </td>
-	
+      
+            <select class="form-control input-sm" id="categoriaSelect" name="obra">
+              <option value="A">Selecciona obra</option>
+              <?php while($ver=mysqli_fetch_row($result)): ?>
+                <option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
+              <?php endwhile; ?>
+            </select>
 	<br>
 	<br>
 	Digite su pedido :

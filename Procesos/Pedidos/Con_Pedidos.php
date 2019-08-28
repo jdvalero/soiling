@@ -1,4 +1,4 @@
-6<?php 
+<?php 
   require_once "../Conexion/conexion.php";
   require_once "Clases/Pedidos.php";
  ?>
@@ -80,17 +80,16 @@
     <br>
   <table style="width:100%" >
   <tr>
-    <th>idPedido</th>
-    <th>Persona_idPersona</th>
-    <th>Obras_idObras</th>
     <th>Pedido</th>
-    
+    <th>Persona</th>
+    <th>Obras</th>
+    <th>Pedido</th>
 <?php 
-  $obj= new pedidos();
-  $sql="SELECT * from pedidos join obras on pedidos.Obras_idObras=obras.idObra";
-  $datos=$obj->pedido($sql);
-  var_dump($datos);
-
+  $obj= new pedido();
+  $sql="SELECT * from pedidos join obras on pedidos.Obras_idObra=obras.idObra join persona on pedidos.Persona_idPersona = persona.idPersona" ;
+  
+  $datos=$obj->ConsultarPedido($sql);
+  
 
   foreach ($datos as $key ) {
  ?>
@@ -99,9 +98,9 @@
     <td><?php echo $key['Persona_idPersona']; ?></td>
     <td><?php echo $key['Obras_idObra']; ?></td>
     <td><?php echo $key['Pedido']; ?></td>
-    
+  
     <td>
-      <a href="Mod_Pedido.php?id=<?php echo $key['idPedidos'] ?>">
+      <a href="Mod_Pedido.php?id=<?php echo $key['idProducto'] ?>">
       Editar
       </a>
     </td>

@@ -96,7 +96,7 @@
   $sql="SELECT * from producto join unidademedida on producto.Unidademedida_idUnidademedida=unidademedida.idUnidademedida join Categoria on producto.Categoria_IdCategoria = Categoria.idCategoria join marca on producto.Marca_idMarca = marca.idMarca";
   
   $datos=$obj->ConsultarProduto($sql);
-  var_dump($datos);
+  
 
   foreach ($datos as $key ) {
  ?>
