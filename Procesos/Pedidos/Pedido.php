@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Pedido</title>
-		<link rel="stylesheet" type="text/css" href="css/Estilo_reg_cli.css">
+		<link rel="stylesheet" type="text/css" href="../../css/Estilo_reg_cli.css">
 	</head>
 	<body>
 
@@ -16,39 +16,36 @@
 
 				<li> <a href="index2.html">Inicio</a> </li>
 
-			  <li><a href="#">Registros</a>
-				<ul class="submenu">
 
-				  <li><a href="Reg_Clientes.html">Registrar cliente</a></li>
-				  <li><a href="Reg_proveedores.html">Registrar proveedor</a></li>
-				  <li><a href="Reg_productos.html">Registrar producto</a></li>
-					<li><a href="Reg_obras.html">Registro de obras</a></li>
-					<li><a href="pedido.html">Pedido</a></li>
-					<li><a href="cre_almacen.html">Crear Almacen</a></li>
-					<li><a href="Caja-menor.html">Crear caja menor</a></li>
-				</ul>
-				</li>
-				 <li><a href="#">Consultas</a>
-			  	<ul class="submenu">
-			      <li><a href="Usuarios.html">Consulta de ususario</a></li>
-			      <li><a href="Proveedores.html">Consulta proveedor</a></li>
-						<li><a href="con_Almacen.html">Consulta almacen</a></li>
-						<li><a href="consultar-cliente.html">Consulta cliente</a></li>
-			    </ul>
-			  </li>
-			  <li><a href="#">Gestiones</a>
-				<ul class="submenu">
-			  		<li><a href="inventario.html">Gestion de bodega</a></li>
-						<li><a href="Con_Pedidos.html">Control pedidos</a></li>
-			  		<li><a href="gestion-obras.html">Gestiones de obras</a></li>
-						<li><a href="Gestion-caja-menor.html">Caja menor</a></li>
-				</ul>
-			 </li>
-			 <li><a href="Factura.html">Factura</a></li>
-			 <li><a href="index.html">Cerrar sesion</a></li>
+        <li><a href="#">Registros</a>
+        <ul class="submenu">
 
-			</ul>
+          
+      
+          <li><a href="../Productos/Reg_productos.php">Registrar producto</a></li>
+         
+          <li><a href="../Pedidos/Pedido.php">Pedido</a></li>
+          <li><a href="cre_almacen.html">Crear Almacen</a></li>
+      
+        </ul>
+        </li>
+          <ul class="submenu">
+           
+           
+           
+        
+          </ul>
+        </li>
+        <li><a href="#">Gestiones</a>
+        <ul class="submenu">
+            <li><a href="../Bodega/inventario.php">Gestion de bodega</a></li>
+            <li><a href="../Pedidos/Con_Pedidos.php">Control pedidos</a></li>
+            
+        </ul>
+       </li>
+       <li><a href="index.html">Cerrar sesion</a></li>
 
+      </ul>
 		</nav>
 		</div>
 	</header>
